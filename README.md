@@ -127,7 +127,7 @@ The theme uses a carefully selected palette of warm, comfortable colors designed
 
 ## Screenshots
 
-(TODO: Add screenshots)
+![Nightingale Theme](showcase.png)
 
 ## Acknowledgments
 
