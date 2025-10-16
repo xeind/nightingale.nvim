@@ -19,7 +19,7 @@ function M.setup(colors, config)
     local highlights = {}
     for _, highlight in ipairs({ "editor", "syntax", "treesitter", "lsp", "plugins" }) do
         local mod = require("nightingale.highlights." .. highlight)
-        for hl, spec in pairs(mod.setup(colors, config)) do
+        for hl, spec in pairs(mod.setup(colors.theme, config)) do
             highlights[hl] = spec
         end
     end
