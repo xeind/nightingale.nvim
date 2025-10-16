@@ -2,6 +2,10 @@
 
 A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm colors and excellent readability.
 
+## Screenshots
+
+![Nightingale Theme](showcase.png)
+
 ## Features
 
 - Full TreeSitter support
@@ -124,10 +128,6 @@ The theme uses a carefully selected palette of warm, comfortable colors designed
 - Foreground: Soft cream/beige
 - Syntax: Greens, blues, purples, and warm accent colors
 - UI: Subtle grays and warm borders
-
-## Screenshots
-
-![Nightingale Theme](showcase.png)
 
 ## Acknowledgments
 
