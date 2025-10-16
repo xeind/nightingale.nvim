@@ -85,109 +85,109 @@
 ---@field term ColorSpec[]
 
 return {
-    ---@param palette PaletteColors
-    ---@return ThemeColors
-    nightingale = function(palette)
-        return {
-            ui = {
-                none = "NONE",
-                fg = palette.fg,
-                fg_dim = palette.fg2,
-                fg_reverse = palette.bg0,
+	---@param palette PaletteColors
+	---@return ThemeColors
+	nightingale = function(palette)
+		return {
+			ui = {
+				none = "NONE",
+				fg = palette.fg,
+				fg_dim = palette.fg2,
+				fg_reverse = palette.bg0,
 
-                bg_dim = palette.bg0,
-                bg = palette.bg0,
-                bg_p1 = palette.bg3,
-                bg_p2 = palette.bg4,
+				bg_dim = palette.bg0,
+				bg = palette.bg0,
+				bg_p1 = palette.bg3,
+				bg_p2 = palette.bg4,
 
-                special = palette.gray2,
-                indent_line = palette.indentGuide,
-                active_indent_line = palette.indentGuideActive,
-                whitespace = palette.gray2,
-                nontext = palette.gray2,
+				special = palette.gray2,
+				indent_line = palette.indentGuide,
+				active_indent_line = palette.indentGuideActive,
+				whitespace = palette.gray2,
+				nontext = palette.gray2,
 
-                bg_visual = palette.selection,
-                bg_search = palette.searchBg,
+				bg_visual = palette.selection,
+				bg_search = palette.searchBg,
 
-                cursor_line_nr_foreground = palette.gray2,
-                cursor_line_nr_active_foreground = palette.fg2,
-                cursor_bg = palette.fg2,
-                cursor_fg = palette.bg0,
+				cursor_line_nr_foreground = palette.gray2,
+				cursor_line_nr_active_foreground = palette.fg2,
+				cursor_bg = palette.fg2,
+				cursor_fg = palette.bg0,
 
-                pmenu = {
-                    fg = palette.fg2,
-                    fg_sel = "NONE",
-                    bg = palette.bg3,
-                    bg_sel = palette.listActiveBg,
-                    bg_thumb = palette.gray2,
-                    bg_sbar = palette.bg3,
-                },
+				pmenu = {
+					fg = palette.fg2,
+					fg_sel = "NONE",
+					bg = palette.bg3,
+					bg_sel = palette.listActiveBg,
+					bg_thumb = palette.gray2,
+					bg_sbar = palette.bg3,
+				},
 
-                float = {
-                    fg = palette.fg2,
-                    bg = palette.bg3,
-                    fg_border = palette.border2,
-                    bg_border = palette.bg3,
-                },
-            },
-            syn = {
-                string = palette.green,
-                variable = palette.fg,
-                number = palette.number,
-                constant = palette.orange,
-                identifier = palette.cyan,
-                parameter = palette.fg,
-                fun = palette.blue,
-                statement = palette.purple,
-                keyword = palette.special,
-                operator = palette.yellow6,
-                preproc = palette.blue,
-                type = palette.cyan,
-                regex = palette.red5,
-                deprecated = palette.gray,
-                punct = palette.fg,
-                comment = palette.gray,
-                special1 = palette.yellow3,
-                special2 = palette.purple,
-                special3 = palette.cyan,
-            },
-            diag = {
-                error = palette.error,
-                ok = palette.green,
-                warning = palette.warning,
-                info = palette.info,
-                hint = palette.hint,
-            },
-            diff = {
-                add = palette.diffAdd,
-                delete = palette.diffDelete,
-                change = palette.diffChange,
-                text = palette.diffText,
-            },
-            vcs = {
-                added = palette.gitAdded,
-                removed = palette.gitRemoved,
-                changed = palette.gitChanged,
-                untracked = palette.gitIgnored,
-            },
-            term = {
-                "#1F1F28",      -- black (terminal.ansiBlack)
-                "#e14c4c",      -- red (terminal.ansiRed)
-                "#89c471",      -- green (terminal.ansiGreen)
-                "#ffd13b",      -- yellow (terminal.ansiYellow)
-                "#5690ac",      -- blue (terminal.ansiBlue)
-                "#957FB8",      -- magenta (terminal.ansiMagenta)
-                "#9CABCA",      -- cyan (terminal.ansiCyan)
-                "#DCD7BA",      -- white (terminal.ansiWhite)
-                "#2A2A37",      -- bright black (terminal.ansiBrightBlack)
-                "#FF5D62",      -- bright red (terminal.ansiBrightRed)
-                "#aed97a",      -- bright green (terminal.ansiBrightGreen)
-                "#E6C384",      -- bright yellow (terminal.ansiBrightYellow)
-                "#81c0da",      -- bright blue (terminal.ansiBrightBlue)
-                "#D27E99",      -- bright magenta (terminal.ansiBrightMagenta)
-                "#A3D4D5",      -- bright cyan (terminal.ansiBrightCyan)
-                "#DCD7BA",      -- bright white (terminal.ansiBrightWhite)
-            },
-        }
-    end,
+				float = {
+					fg = palette.fg2,
+					bg = palette.bg3,
+					fg_border = palette.border2,
+					bg_border = palette.bg3,
+				},
+			},
+			syn = {
+				string = palette.green,
+				variable = palette.fg,
+				number = palette.number,
+				constant = palette.orange,
+				identifier = palette.cyan,
+				parameter = palette.fg,
+				fun = palette.blue,
+				statement = palette.purple,
+				keyword = palette.special,
+				operator = palette.yellow6,
+				preproc = palette.blue,
+				type = palette.cyan,
+				regex = palette.red5,
+				deprecated = palette.gray,
+				punct = palette.fg,
+				comment = palette.gray,
+				special1 = palette.yellow3,
+				special2 = palette.purple,
+				special3 = palette.cyan,
+			},
+			diag = {
+				error = palette.error,
+				ok = palette.green,
+				warning = palette.warning,
+				info = palette.info,
+				hint = palette.hint,
+			},
+			diff = {
+				add = palette.diffAdd,
+				delete = palette.diffDelete,
+				change = palette.diffChange,
+				text = palette.diffText,
+			},
+			vcs = {
+				added = palette.gitAdded,
+				removed = palette.gitRemoved,
+				changed = palette.gitChanged,
+				untracked = palette.gitIgnored,
+			},
+			term = {
+				"#1F1F28", -- black (terminal.ansiBlack)
+				"#e14c4c", -- red (terminal.ansiRed)
+				"#89c471", -- green (terminal.ansiGreen)
+				"#ffd13b", -- yellow (terminal.ansiYellow)
+				"#5690ac", -- blue (terminal.ansiBlue)
+				"#957FB8", -- magenta (terminal.ansiMagenta)
+				"#9CABCA", -- cyan (terminal.ansiCyan)
+				"#DCD7BA", -- white (terminal.ansiWhite)
+				"#2A2A37", -- bright black (terminal.ansiBrightBlack)
+				"#FF5D62", -- bright red (terminal.ansiBrightRed)
+				"#aed97a", -- bright green (terminal.ansiBrightGreen)
+				"#E6C384", -- bright yellow (terminal.ansiBrightYellow)
+				"#81c0da", -- bright blue (terminal.ansiBrightBlue)
+				"#D27E99", -- bright magenta (terminal.ansiBrightMagenta)
+				"#A3D4D5", -- bright cyan (terminal.ansiBrightCyan)
+				"#DCD7BA", -- bright white (terminal.ansiBrightWhite)
+			},
+		}
+	end,
 }
