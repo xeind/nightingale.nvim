@@ -25,7 +25,7 @@ A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm co
 
 ```lua
 {
-    "yourusername/nightingale.nvim",
+    "xeind/nightingale.nvim",
     lazy = false,
     priority = 1000,
     config = function()
@@ -39,7 +39,7 @@ A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm co
 
 ```lua
 use {
-    "yourusername/nightingale.nvim",
+    "xeind/nightingale.nvim",
     config = function()
         require("nightingale").setup()
         vim.cmd("colorscheme nightingale")
@@ -50,7 +50,7 @@ use {
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'yourusername/nightingale.nvim'
+Plug 'xeind/nightingale.nvim'
 ```
 
 Then in your `init.vim` or `init.lua`:
