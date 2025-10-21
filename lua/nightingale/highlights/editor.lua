@@ -29,7 +29,7 @@ function M.setup(theme, config)
         WinSeparator = { fg = theme.ui.bg_p2, bg = transparent and theme.ui.none or theme.ui.bg },
         Folded = { fg = theme.syn.comment, bg = transparent and theme.ui.none or theme.ui.bg_p1 },
         FoldColumn = { fg = theme.syn.comment, bg = transparent and theme.ui.none or theme.ui.bg },
-        SignColumn = { fg = theme.ui.special, bg = transparent and theme.ui.none or theme.ui.bg },
+        SignColumn = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
         SignColumnSB = { link = "SignColumn" },
         Substitute = { fg = theme.ui.fg, bg = theme.ui.bg_search },
         LineNr = { fg = theme.ui.cursor_line_nr_foreground, bg = theme.ui.bg_gutter },
