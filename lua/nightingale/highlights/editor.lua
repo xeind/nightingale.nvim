@@ -99,6 +99,9 @@ function M.setup(theme, config)
         DiagnosticUnderlineInfo = { undercurl = true, sp = theme.diag.info },
         DiagnosticUnderlineHint = { undercurl = true, sp = theme.diag.hint },
 
+        DiagnosticUnnecessary = { fg = "#8a8a8a", italic = true },
+        DiagnosticDeprecated = { fg = theme.syn.deprecated, strikethrough = true },
+
         LspSignatureActiveParameter = { fg = theme.diag.warning },
         LspCodeLens = { fg = theme.syn.comment },
 
