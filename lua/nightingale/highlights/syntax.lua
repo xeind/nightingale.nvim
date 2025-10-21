@@ -37,7 +37,7 @@ function M.setup(theme, config)
 
         Special = { fg = theme.syn.special1 },
         SpecialChar = { fg = theme.syn.special2 },
-        Tag = { fg = theme.syn.special3 },
+        Tag = { fg = theme.ui.fg },
         Delimiter = { fg = theme.syn.punct },
         SpecialComment = { fg = theme.syn.comment },
         Debug = { fg = theme.syn.special1 },

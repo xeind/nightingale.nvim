@@ -115,8 +115,8 @@ function M.setup(theme, config)
         ["@diff.minus"] = { fg = theme.vcs.removed },
         ["@diff.delta"] = { fg = theme.vcs.changed },
 
-        ["@tag"] = { fg = theme.syn.tag },
-        ["@tag.attribute"] = { fg = theme.syn.identifier },
+        ["@tag"] = { fg = theme.ui.fg },
+        ["@tag.attribute"] = { fg = theme.ui.fg },
         ["@tag.delimiter"] = { fg = theme.syn.tag_delimiter },
 
         ["@none"] = {},
