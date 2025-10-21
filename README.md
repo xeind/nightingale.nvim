@@ -1,4 +1,4 @@
-# Nightingale
+# Nightingale.nvim
 
 A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions.
 
