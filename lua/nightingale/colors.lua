@@ -26,6 +26,9 @@ local palette = {
 	fg2 = "#DCD7BA", -- main foreground text
 	fg3 = "#C8C093", -- statusBar.foreground
 	fgDim = "#bbbbbb", -- sideBarTitle.foreground
+	
+	-- Variable color
+	variable = "#e8e4ca", -- variable and parameter names from VS Code
 
 	-- Grays
 	gray = "#727169", -- comments
