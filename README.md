@@ -29,7 +29,9 @@ A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm co
     lazy = false,
     priority = 1000,
     config = function()
-        require("nightingale").setup()
+        require("nightingale").setup({
+            transparent = true,
+        })
         vim.cmd("colorscheme nightingale")
     end,
 }
@@ -41,7 +43,9 @@ A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm co
 use {
     "xeind/nightingale.nvim",
     config = function()
-        require("nightingale").setup()
+        require("nightingale").setup({
+            transparent = true,
+        })
         vim.cmd("colorscheme nightingale")
     end
 }
@@ -57,7 +61,9 @@ Then in your `init.vim` or `init.lua`:
 
 ```lua
 lua << EOF
-require("nightingale").setup()
+require("nightingale").setup({
+    transparent = true,
+})
 vim.cmd("colorscheme nightingale")
 EOF
 ```
@@ -67,7 +73,9 @@ EOF
 ### Basic Setup
 
 ```lua
-require("nightingale").setup()
+require("nightingale").setup({
+    transparent = true,
+})
 vim.cmd("colorscheme nightingale")
 ```
 
