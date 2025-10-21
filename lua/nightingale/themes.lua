@@ -25,6 +25,7 @@
 ---@field warning ColorSpec
 ---@field info ColorSpec
 ---@field hint ColorSpec
+---@field unnecessary ColorSpec
 
 ---@class DiffElements
 ---@field add ColorSpec
@@ -175,13 +176,14 @@ return {
 			url = palette.blue6,
 			escape_char = palette.escape,
 		},
-			diag = {
-				error = palette.error,
-				ok = palette.green,
-				warning = palette.warning,
-				info = palette.info,
-				hint = palette.hint,
-			},
+		diag = {
+			error = palette.error,
+			ok = palette.green,
+			warning = palette.warning,
+			info = palette.info,
+			hint = palette.hint,
+			unnecessary = palette.gray6,
+		},
 			diff = {
 				add = palette.diffAdd,
 				delete = palette.diffDelete,

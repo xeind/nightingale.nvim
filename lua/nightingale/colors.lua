@@ -36,6 +36,7 @@ local palette = {
 	gray3 = "#909398",
 	gray4 = "#808080",
 	gray5 = "#505050", -- focusBorder
+	gray6 = "#ababab", -- unused/unnecessary (smokey gray)
 
 	-- Indent guides
 	indentGuide = "#303030",
