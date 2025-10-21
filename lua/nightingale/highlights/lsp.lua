@@ -56,6 +56,7 @@ function M.setup(theme, config)
 		["@lsp.typemod.variable.readonly"] = { fg = theme.syn.constant },
 
 		["@lsp.type.selfParameter"] = { fg = theme.syn.operator, italic = true },
+		["@lsp.mod.unused"] = { fg = "#8a8a8a", italic = true },
 	}
 end
 
