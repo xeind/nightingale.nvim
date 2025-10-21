@@ -95,11 +95,11 @@ return {
 				fg_dim = palette.fg2,
 				fg_reverse = palette.bg0,
 
-				bg_dim = palette.bg0,
-				bg = palette.bg0,
-				bg_p1 = palette.bg3,
-				bg_p2 = palette.bg4,
-				bg_gutter = "NONE",
+			bg_dim = palette.bg0,
+			bg = palette.bg0,
+			bg_p1 = palette.bg3,
+			bg_p2 = palette.bg4,
+			bg_gutter = palette.bg0,
 
 				special = palette.gray2,
 				indent_line = palette.indentGuide,
