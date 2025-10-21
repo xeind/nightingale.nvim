@@ -105,6 +105,57 @@ function M.setup(theme, config)
     highlights.NavicText = { fg = theme.ui.fg }
     highlights.NavicSeparator = { fg = theme.syn.punct }
 
+    highlights.DapBreakpoint = { fg = theme.diag.error }
+    highlights.DapBreakpointCondition = { fg = theme.diag.warning }
+    highlights.DapBreakpointRejected = { fg = theme.syn.comment }
+    highlights.DapLogPoint = { fg = theme.diag.info }
+    highlights.DapStopped = { fg = theme.diag.warning }
+    highlights.DapStoppedLine = { bg = theme.ui.bg_p2 }
+    highlights.DapUIBreakpointsCurrentLine = { fg = theme.diag.info, bold = true }
+    highlights.DapUIBreakpointsDisabledLine = { fg = theme.syn.comment }
+    highlights.DapUIBreakpointsInfo = { fg = theme.diag.info }
+    highlights.DapUIBreakpointsPath = { fg = theme.syn.fun }
+    highlights.DapUIDecoration = { fg = theme.syn.special1 }
+    highlights.DapUIFloatBorder = { link = "FloatBorder" }
+    highlights.DapUIFrameName = { fg = theme.ui.fg }
+    highlights.DapUILineNumber = { fg = theme.diag.info }
+    highlights.DapUIModifiedValue = { fg = theme.diag.warning, bold = true }
+    highlights.DapUIPlayPause = { fg = theme.diag.ok }
+    highlights.DapUIRestart = { fg = theme.diag.ok }
+    highlights.DapUIScope = { fg = theme.syn.fun }
+    highlights.DapUISource = { fg = theme.syn.special1 }
+    highlights.DapUIStepBack = { fg = theme.diag.info }
+    highlights.DapUIStepInto = { fg = theme.diag.info }
+    highlights.DapUIStepOut = { fg = theme.diag.info }
+    highlights.DapUIStepOver = { fg = theme.diag.info }
+    highlights.DapUIStop = { fg = theme.diag.error }
+    highlights.DapUIStoppedThread = { fg = theme.diag.info }
+    highlights.DapUIThread = { fg = theme.syn.fun }
+    highlights.DapUIType = { fg = theme.syn.type }
+    highlights.DapUIUnavailable = { fg = theme.syn.comment }
+    highlights.DapUIWatchesEmpty = { fg = theme.syn.comment }
+    highlights.DapUIWatchesError = { fg = theme.diag.error }
+    highlights.DapUIWatchesValue = { fg = theme.syn.string }
+
+    highlights.TroubleNormal = { link = "NormalFloat" }
+    highlights.TroubleText = { fg = theme.ui.fg }
+    highlights.TroubleCount = { fg = theme.syn.number, bg = theme.ui.bg_p1 }
+    highlights.TroubleCode = { fg = theme.syn.comment }
+    highlights.TroubleFile = { fg = theme.syn.fun }
+    highlights.TroubleSource = { fg = theme.syn.comment }
+    highlights.TroubleLocation = { fg = theme.syn.comment }
+    highlights.TroubleIndent = { fg = theme.ui.indent_line }
+    highlights.TroubleFoldIcon = { fg = theme.syn.special1 }
+    highlights.TroubleSignError = { fg = theme.diag.error }
+    highlights.TroubleSignWarning = { fg = theme.diag.warning }
+    highlights.TroubleSignInformation = { fg = theme.diag.info }
+    highlights.TroubleSignHint = { fg = theme.diag.hint }
+    highlights.TroubleSignOther = { fg = theme.syn.special1 }
+    highlights.TroubleTextError = { fg = theme.diag.error }
+    highlights.TroubleTextWarning = { fg = theme.diag.warning }
+    highlights.TroubleTextInformation = { fg = theme.diag.info }
+    highlights.TroubleTextHint = { fg = theme.diag.hint }
+
     return highlights
 end
 

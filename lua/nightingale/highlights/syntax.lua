@@ -19,7 +19,7 @@ function M.setup(theme, config)
         Statement = { fg = theme.syn.statement },
         Conditional = { fg = theme.syn.control_flow, italic = true, bold = true },
         Repeat = { fg = theme.syn.control_flow, italic = true, bold = true },
-        Label = { fg = theme.syn.control_flow, italic = true, bold = true },
+        Label = { fg = theme.syn.label },
         Operator = { fg = theme.syn.operator },
         Keyword = { fg = theme.syn.keyword },
         Exception = { fg = theme.syn.control_flow, italic = true, bold = true },

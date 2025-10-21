@@ -131,31 +131,50 @@ return {
 					bg_border = palette.bg3,
 				},
 			},
-			syn = {
-				string = palette.green,
-				variable = palette.variable,
-				number = palette.number,
-				constant = palette.orange,
-				identifier = palette.cyan,
-				parameter = palette.variable,
-				fun = palette.blue,
-				statement = palette.purple,
-				keyword = palette.special,
-				operator = palette.yellow6,
-				preproc = palette.blue,
-				type = palette.cyan,
-				regex = palette.red5,
-				deprecated = palette.gray,
-				punct = palette.fg,
-				comment = palette.gray,
-				special1 = palette.yellow3,
-				special2 = palette.escape,
-				special3 = palette.cyan,
-				control_flow = palette.purple,
-				object_key = palette.pink,
-				property_decl = palette.yellow8,
-				regex_group = palette.pink2,
-			},
+		syn = {
+			string = palette.green,
+			variable = palette.variable,
+			number = palette.number,
+			constant = palette.orange,
+			identifier = palette.cyan2,
+			parameter = palette.variable,
+			fun = palette.blue,
+			statement = palette.purple,
+			keyword = palette.special,
+			operator = palette.yellow6,
+			preproc = palette.purple2,
+			type = palette.cyan,
+			regex = palette.red5,
+			deprecated = palette.gray,
+			punct = palette.fg,
+			comment = palette.gray,
+			special1 = palette.yellow3,
+			special2 = palette.escape,
+			special3 = palette.blue6,
+			control_flow = palette.purple,
+			object_key = palette.pink,
+			property_decl = palette.yellow8,
+			regex_group = palette.pink2,
+
+			module = palette.blue5,
+			namespace = palette.blue5,
+			enum = palette.orange2,
+			enum_member = palette.orange,
+			interface = palette.cyan3,
+			type_builtin = palette.cyan,
+			type_parameter = palette.cyan3,
+			decorator = palette.purple4,
+			attribute = palette.yellow3,
+			label = palette.pink3,
+			macro = palette.purple2,
+			builtin_var = palette.blue7,
+			constructor = palette.aqua,
+			method = palette.blue4,
+			tag = palette.blue2,
+			tag_delimiter = palette.gray3,
+			url = palette.blue6,
+			escape_char = palette.escape,
+		},
 			diag = {
 				error = palette.error,
 				ok = palette.green,
@@ -175,24 +194,24 @@ return {
 				changed = palette.gitChanged,
 				untracked = palette.gitIgnored,
 			},
-			term = {
-				"#1F1F28", -- black (terminal.ansiBlack)
-				"#e14c4c", -- red (terminal.ansiRed)
-				"#89c471", -- green (terminal.ansiGreen)
-				"#ffd13b", -- yellow (terminal.ansiYellow)
-				"#5690ac", -- blue (terminal.ansiBlue)
-				"#957FB8", -- magenta (terminal.ansiMagenta)
-				"#9CABCA", -- cyan (terminal.ansiCyan)
-				"#DCD7BA", -- white (terminal.ansiWhite)
-				"#2A2A37", -- bright black (terminal.ansiBrightBlack)
-				"#FF5D62", -- bright red (terminal.ansiBrightRed)
-				"#aed97a", -- bright green (terminal.ansiBrightGreen)
-				"#E6C384", -- bright yellow (terminal.ansiBrightYellow)
-				"#81c0da", -- bright blue (terminal.ansiBrightBlue)
-				"#D27E99", -- bright magenta (terminal.ansiBrightMagenta)
-				"#A3D4D5", -- bright cyan (terminal.ansiBrightCyan)
-				"#DCD7BA", -- bright white (terminal.ansiBrightWhite)
-			},
+		term = {
+			palette.bg0, -- black (terminal.ansiBlack)
+			palette.red2, -- red (terminal.ansiRed)
+			palette.green2, -- green (terminal.ansiGreen)
+			palette.yellow2, -- yellow (terminal.ansiYellow)
+			palette.blue3, -- blue (terminal.ansiBlue)
+			palette.purple2, -- magenta (terminal.ansiMagenta)
+			palette.cyan2, -- cyan (terminal.ansiCyan)
+			palette.fg2, -- white (terminal.ansiWhite)
+			palette.bg3, -- bright black (terminal.ansiBrightBlack)
+			palette.red3, -- bright red (terminal.ansiBrightRed)
+			palette.green3, -- bright green (terminal.ansiBrightGreen)
+			palette.yellow3, -- bright yellow (terminal.ansiBrightYellow)
+			palette.blue4, -- bright blue (terminal.ansiBrightBlue)
+			palette.purple3, -- bright magenta (terminal.ansiBrightMagenta)
+			palette.cyan3, -- bright cyan (terminal.ansiBrightCyan)
+			palette.fg2, -- bright white (terminal.ansiBrightWhite)
+		},
 		}
 	end,
 }

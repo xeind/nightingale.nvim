@@ -6,21 +6,22 @@ local M = {}
 function M.setup(theme, config)
     return {
         ["@variable"] = { fg = theme.syn.variable },
-        ["@variable.builtin"] = { fg = theme.syn.constant, italic = true },
+        ["@variable.builtin"] = { fg = theme.syn.builtin_var, italic = true },
         ["@variable.parameter"] = { fg = theme.syn.parameter },
+        ["@variable.parameter.builtin"] = { fg = theme.syn.builtin_var, italic = true },
         ["@variable.member"] = { fg = theme.syn.identifier },
 
         ["@constant"] = { fg = theme.syn.constant },
         ["@constant.builtin"] = { fg = theme.syn.constant },
-        ["@constant.macro"] = { fg = theme.syn.constant },
+        ["@constant.macro"] = { fg = theme.syn.macro },
         
         ["@lsp.type.property"] = { fg = theme.syn.property_decl },
         ["@lsp.type.enumMember"] = { fg = theme.syn.constant },
         ["@lsp.mod.readonly"] = { fg = theme.syn.constant },
 
-        ["@module"] = { fg = theme.syn.identifier },
-        ["@module.builtin"] = { fg = theme.syn.constant },
-        ["@label"] = { fg = theme.syn.special1 },
+        ["@module"] = { fg = theme.syn.module },
+        ["@module.builtin"] = { fg = theme.syn.builtin_var },
+        ["@label"] = { fg = theme.syn.label },
 
         ["@string"] = { fg = theme.syn.string },
         ["@string.documentation"] = { fg = theme.syn.string },
@@ -28,7 +29,7 @@ function M.setup(theme, config)
         ["@string.escape"] = { fg = theme.syn.special2 },
         ["@string.special"] = { fg = theme.syn.special1 },
         ["@string.special.symbol"] = { fg = theme.syn.identifier },
-        ["@string.special.url"] = { fg = theme.syn.special3, underline = true },
+        ["@string.special.url"] = { fg = theme.syn.url, underline = true },
         ["@string.special.path"] = { fg = theme.syn.string },
 
         ["@character"] = { fg = theme.syn.string },
@@ -42,18 +43,18 @@ function M.setup(theme, config)
         ["@type.builtin"] = { fg = theme.syn.type },
         ["@type.definition"] = { fg = theme.syn.type },
 
-        ["@attribute"] = { fg = theme.syn.special1 },
-        ["@attribute.builtin"] = { fg = theme.syn.special1 },
+        ["@attribute"] = { fg = theme.syn.decorator },
+        ["@attribute.builtin"] = { fg = theme.syn.decorator },
         ["@property"] = { fg = theme.syn.property_decl },
 
         ["@function"] = { fg = theme.syn.fun, italic = true },
         ["@function.builtin"] = { fg = theme.syn.fun, italic = true },
         ["@function.call"] = { fg = theme.syn.fun, italic = true },
-        ["@function.macro"] = { fg = theme.syn.preproc },
-        ["@function.method"] = { fg = theme.syn.fun, italic = true },
-        ["@function.method.call"] = { fg = theme.syn.fun, italic = true },
+        ["@function.macro"] = { fg = theme.syn.macro },
+        ["@function.method"] = { fg = theme.syn.method, italic = true },
+        ["@function.method.call"] = { fg = theme.syn.method, italic = true },
 
-        ["@constructor"] = { fg = theme.syn.type },
+        ["@constructor"] = { fg = theme.syn.constructor },
         ["@operator"] = { fg = theme.syn.operator },
 
         ["@keyword"] = { fg = theme.syn.keyword },
@@ -61,6 +62,8 @@ function M.setup(theme, config)
         ["@keyword.function"] = { fg = theme.syn.keyword },
         ["@keyword.operator"] = { fg = theme.syn.operator },
         ["@keyword.import"] = { fg = theme.syn.preproc },
+        ["@keyword.type"] = { fg = theme.syn.keyword },
+        ["@keyword.modifier"] = { fg = theme.syn.keyword, italic = true },
         ["@keyword.repeat"] = { fg = theme.syn.control_flow, italic = true, bold = true },
         ["@keyword.return"] = { fg = theme.syn.control_flow, italic = true, bold = true },
         ["@keyword.debug"] = { fg = theme.syn.keyword },
@@ -76,10 +79,10 @@ function M.setup(theme, config)
 
         ["@comment"] = { link = "Comment" },
         ["@comment.documentation"] = { fg = theme.syn.comment },
-        ["@comment.error"] = { fg = theme.diag.error },
-        ["@comment.warning"] = { fg = theme.diag.warning },
-        ["@comment.todo"] = { fg = theme.diag.info },
-        ["@comment.note"] = { fg = theme.diag.hint },
+        ["@comment.error"] = { fg = theme.diag.error, bg = theme.ui.bg_p1, bold = true },
+        ["@comment.warning"] = { fg = theme.diag.warning, bg = theme.ui.bg_p1, bold = true },
+        ["@comment.todo"] = { fg = theme.diag.info, bg = theme.ui.bg_p1, bold = true },
+        ["@comment.note"] = { fg = theme.diag.hint, bg = theme.ui.bg_p1, bold = true },
 
         ["@markup.strong"] = { bold = true },
         ["@markup.italic"] = { italic = true },
@@ -112,9 +115,9 @@ function M.setup(theme, config)
         ["@diff.minus"] = { fg = theme.vcs.removed },
         ["@diff.delta"] = { fg = theme.vcs.changed },
 
-        ["@tag"] = { fg = theme.syn.special3 },
+        ["@tag"] = { fg = theme.syn.tag },
         ["@tag.attribute"] = { fg = theme.syn.identifier },
-        ["@tag.delimiter"] = { fg = theme.syn.punct },
+        ["@tag.delimiter"] = { fg = theme.syn.tag_delimiter },
 
         ["@none"] = {},
         ["@conceal"] = { link = "Conceal" },
