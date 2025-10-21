@@ -1,17 +1,15 @@
 # nightingale.nvim
 
-A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm colors and excellent readability.
+A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions.
 
-## Screenshots
+## Preview
 
-![Nightingale Theme](showcase.png)
+![Nightingale Theme](./preview.jpg)
 
 ## Features
 
-- Full TreeSitter support
+- TreeSitter support
 - LSP semantic highlighting
-- Popular plugin integrations (Telescope, NvimTree, neo-tree, GitSigns, and more)
-- Consistent color palette
 - Terminal colors support
 
 ## Requirements
@@ -70,63 +68,45 @@ EOF
 
 ## Usage
 
-### Basic Setup
+As simple as:
+
+```vim
+colorscheme nightingale
+```
 
 ```lua
-require("nightingale").setup({
-    transparent = true,
-})
 vim.cmd("colorscheme nightingale")
 ```
 
-### Configuration
+## Configuration
+
+There is no need to call setup if you are ok with the defaults.
 
 ```lua
-require("nightingale").setup({
-    compile = false,           -- Enable compile cache for faster loading
-    transparent = false,       -- Disable background color
-    dim_inactive = false,      -- Dim inactive windows
-    styles = {
-        comments = { italic = true },
-        keywords = { italic = false },
-        functions = {},
-        variables = {},
+-- Default options:
+require('nightingale').setup({
+    compile = false,             -- enable compiling the colorscheme
+    undercurl = true,            -- enable undercurls
+    commentStyle = { italic = true },
+    functionStyle = { italic = true },
+    keywordStyle = { italic = true, bold = true },
+    statementStyle = {},
+    typeStyle = {},
+    transparent = false,         -- do not set background color
+    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+    colors = {                   -- add/modify theme and palette colors
+        palette = {},
+        theme = { nightingale = {} },
     },
+    overrides = function(colors) -- add/modify highlights
+        return {}
+    end,
 })
+
+-- setup must be called before loading
+vim.cmd("colorscheme nightingale")
 ```
-
-### Compile for Faster Load Times
-
-Nightingale can pre-compute highlight groups for faster startup:
-
-```lua
-require("nightingale").setup({
-    compile = true,
-})
-```
-
-Or compile manually:
-
-```lua
-:lua require("nightingale").compile()
-```
-
-## Plugin Support
-
-Nightingale includes highlight definitions for:
-
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
-- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
-- [which-key](https://github.com/folke/which-key.nvim)
-- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [leap.nvim](https://github.com/ggandor/leap.nvim)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
-- And more!
 
 ## Color Palette
 
@@ -139,8 +119,8 @@ The theme uses a carefully selected palette of warm, comfortable colors designed
 
 ## Acknowledgments
 
-- Original [Nightingale VS Code theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme)
-- Inspired by [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) structure
+- Original [Nightingale VS Code theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme) by bfrangi
+- Theme structure inspired by [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 
 ## License
 

@@ -40,6 +40,22 @@ function M.setup(theme, config)
 		["@lsp.typemod.variable.defaultLibrary"] = { fg = theme.syn.builtin_var, italic = true },
 		["@lsp.typemod.variable.global"] = { link = "@constant" },
 		["@lsp.typemod.variable.static"] = { link = "@constant" },
+
+		-- Semantic token mappings (from VSCode Nightingale `semanticTokenColors`)
+		-- Map VSCode semantic tokens to Neovim @lsp.* groups so JS/TS highlights
+		-- (numberLiteral, stringLiteral, property.declaration, variable.declaration, readonly, selfParameter, newOperator)
+
+		["@lsp.typemod.operator.controlFlow"] = { fg = theme.syn.control_flow }, -- newOperator / control-flow operator
+		["@lsp.type.stringLiteral"] = { link = "@string" },
+		["@lsp.type.string"] = { link = "@string" },
+		["@lsp.type.customLiteral"] = { fg = theme.ui.fg },
+		["@lsp.type.numberLiteral"] = { fg = theme.syn.number, italic = true },
+
+		["@lsp.type.property.declaration"] = { fg = theme.syn.property_decl },
+		["@lsp.type.variable.declaration"] = { fg = theme.syn.variable },
+		["@lsp.typemod.variable.readonly"] = { fg = theme.syn.constant },
+
+		["@lsp.type.selfParameter"] = { fg = theme.syn.operator, italic = true },
 	}
 end
 
