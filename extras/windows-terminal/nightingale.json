@@ -1,0 +1,25 @@
+[
+    {
+        "background": "#202020",
+        "black": "#202020",
+        "blue": "#5690ac",
+        "brightBlack": "#727169",
+        "brightBlue": "#81c0da",
+        "brightCyan": "#A3D4D5",
+        "brightGreen": "#aed97a",
+        "brightPurple": "#D27E99",
+        "brightRed": "#FF5D62",
+        "brightWhite": "#ffffff",
+        "brightYellow": "#E6C384",
+        "cursorColor": "#ffffff",
+        "cyan": "#9CABCA",
+        "foreground": "#ffffff",
+        "green": "#89c471",
+        "name": "Nightingale",
+        "purple": "#957fb8",
+        "red": "#e14c4c",
+        "selectionBackground": "#323232",
+        "white": "#bbbbbb",
+        "yellow": "#ffd13b"
+    }
+]

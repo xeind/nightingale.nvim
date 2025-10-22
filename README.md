@@ -1,10 +1,15 @@
 # Nightingale.nvim
 
+![Nightingale Theme](./preview.jpg)
+
 A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions.
 
-## Preview
+The theme uses a carefully selected palette of warm, comfortable colors designed for long coding sessions:
 
-![Nightingale Theme](./preview.jpg)
+- Background: Deep warm dark tones
+- Foreground: Soft cream/beige
+- Syntax: Greens, blues, purples, and warm accent colors
+- UI: Subtle grays and warm borders
 
 ## Features
 
@@ -55,15 +60,13 @@ use {
 Plug 'xeind/nightingale.nvim'
 ```
 
-Then in your `init.vim` or `init.lua`:
+Then in your config:
 
 ```lua
-lua << EOF
 require("nightingale").setup({
     transparent = true,
 })
 vim.cmd("colorscheme nightingale")
-EOF
 ```
 
 ## Usage
@@ -80,7 +83,7 @@ vim.cmd("colorscheme nightingale")
 
 ## Configuration
 
-There is no need to call setup if you are ok with the defaults.
+There is no need to call setup if you are okay with the defaults.
 
 ```lua
 -- Default options:
@@ -139,15 +142,6 @@ require('nightingale').setup({
     end,
 })
 ```
-
-## Color Palette
-
-The theme uses a carefully selected palette of warm, comfortable colors designed for long coding sessions:
-
-- Background: Deep warm dark tones
-- Foreground: Soft cream/beige
-- Syntax: Greens, blues, purples, and warm accent colors
-- UI: Subtle grays and warm borders
 
 ## Acknowledgments
 

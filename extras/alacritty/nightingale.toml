@@ -1,0 +1,37 @@
+# Nightingale Alacritty Colors
+
+[colors.primary]
+background = '#202020'
+foreground = '#ffffff'
+
+[colors.normal]
+black = '#202020'
+red = '#e14c4c'
+green = '#89c471'
+yellow = '#ffd13b'
+blue = '#5690ac'
+magenta = '#957fb8'
+cyan = '#9CABCA'
+white = '#bbbbbb'
+
+[colors.bright]
+black = '#727169'
+red = '#FF5D62'
+green = '#aed97a'
+yellow = '#E6C384'
+blue = '#81c0da'
+magenta = '#D27E99'
+cyan = '#A3D4D5'
+white = '#ffffff'
+
+[colors.selection]
+background = '#323232'
+foreground = '#ffffff'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#ffa066'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#f5a284'
