@@ -12,9 +12,9 @@ function M.setup(theme, config)
 		Constant = { fg = theme.syn.constant },
 		String = { fg = theme.syn.string },
 		Character = { fg = theme.syn.string },
-		Number = { fg = theme.syn.number, italic = true },
+		Number = vim.tbl_extend("force", { fg = theme.syn.number }, config.numberStyle),
 		Boolean = { fg = theme.syn.constant },
-		Float = { fg = theme.syn.number, italic = true },
+		Float = vim.tbl_extend("force", { fg = theme.syn.number }, config.numberStyle),
 
 		Identifier = { fg = theme.syn.identifier },
 		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, config.functionStyle),

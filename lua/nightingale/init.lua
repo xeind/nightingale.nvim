@@ -15,6 +15,7 @@ M.config = {
 	keywordStyle = { italic = true, bold = true },
 	statementStyle = {},
 	typeStyle = {},
+	numberStyle = {},
 	transparent = false,
 	dimInactive = false,
 	terminalColors = true,

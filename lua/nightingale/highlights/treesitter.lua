@@ -36,8 +36,8 @@ function M.setup(theme, config)
 		["@character.special"] = { fg = theme.syn.special2 },
 
 		["@boolean"] = { fg = theme.syn.constant },
-		["@number"] = { fg = theme.syn.number, italic = true },
-		["@number.float"] = { fg = theme.syn.number, italic = true },
+		["@number"] = vim.tbl_extend("force", { fg = theme.syn.number }, config.numberStyle),
+		["@number.float"] = vim.tbl_extend("force", { fg = theme.syn.number }, config.numberStyle),
 
 		["@type"] = { fg = theme.syn.type },
 		["@type.builtin"] = { fg = theme.syn.type },
@@ -67,9 +67,9 @@ function M.setup(theme, config)
 		["@keyword.type"] = { fg = theme.syn.keyword },
 		["@keyword.modifier"] = { fg = theme.syn.keyword, italic = true },
 		["@keyword.repeat"] = { fg = theme.syn.control_flow, italic = true, bold = true },
-		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.statement }, config.keywordStyle),
+		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.keywordStyle),
 		["@keyword.debug"] = { fg = theme.syn.keyword },
-		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.keywordStyle),
+		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.statementStyle),
 		["@keyword.conditional"] = { fg = theme.syn.control_flow, italic = true, bold = true },
 		["@keyword.conditional.ternary"] = { fg = theme.syn.operator },
 		["@keyword.directive"] = { fg = theme.syn.preproc },

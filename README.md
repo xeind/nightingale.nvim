@@ -92,6 +92,7 @@ require('nightingale').setup({
     keywordStyle = { italic = true, bold = true },
     statementStyle = {},
     typeStyle = {},
+    numberStyle = {},            -- disabled by default
     transparent = false,         -- do not set background color
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
@@ -106,6 +107,37 @@ require('nightingale').setup({
 
 -- setup must be called before loading
 vim.cmd("colorscheme nightingale")
+```
+
+### Style Customization Examples
+
+```lua
+require('nightingale').setup({
+    -- Enable transparent background
+    transparent = true,
+
+    -- Enable italic numbers
+    numberStyle = { italic = true },
+
+    -- Disable all styling
+    commentStyle = {},
+    functionStyle = {},
+    keywordStyle = {},
+
+    -- Dim inactive windows
+    dimInactive = true,
+
+    -- Custom color overrides
+    overrides = function(colors)
+        local theme = colors.theme
+        return {
+            -- Make line numbers stand out more
+            LineNr = { fg = theme.ui.fg_dim, bold = true },
+            -- Custom diagnostic colors
+            DiagnosticError = { fg = "#ff0000" },
+        }
+    end,
+})
 ```
 
 ## Color Palette

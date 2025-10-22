@@ -306,6 +306,14 @@ function M.setup(theme, config)
 	highlights.LeapLabelPrimary = { fg = theme.ui.bg, bg = theme.diag.warning, bold = true }
 	highlights.LeapLabelSecondary = { fg = theme.ui.bg, bg = theme.diag.info, bold = true }
 
+	highlights.FlashBackdrop = { link = "Comment" }
+	highlights.FlashMatch = { fg = theme.syn.fun, bold = true }
+	highlights.FlashCurrent = { fg = theme.ui.bg, bg = theme.syn.special1, bold = true }
+	highlights.FlashLabel = { fg = theme.ui.bg, bg = theme.diag.warning, bold = true }
+	highlights.FlashPrompt = { link = "MsgArea" }
+	highlights.FlashPromptIcon = { fg = theme.syn.special1 }
+	highlights.FlashCursor = { link = "Cursor" }
+
 	highlights.NotifyBackground = { bg = theme.ui.bg }
 	highlights.NotifyERRORBorder = { fg = theme.diag.error }
 	highlights.NotifyWARNBorder = { fg = theme.diag.warning }
@@ -457,6 +465,129 @@ function M.setup(theme, config)
 	highlights.NeotestTest = { fg = theme.ui.fg }
 	highlights.NeotestUnknown = { fg = theme.syn.deprecated }
 	highlights.NeotestWatching = { fg = theme.vcs.changed }
+
+	highlights.BufferLineBackground = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.BufferLineBuffer = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.BufferLineBufferSelected = { fg = theme.ui.fg, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineBufferVisible = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim }
+	highlights.BufferLineCloseButton = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.BufferLineCloseButtonSelected = { fg = theme.diag.error, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineCloseButtonVisible = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim }
+	highlights.BufferLineDuplicate = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3, italic = true }
+	highlights.BufferLineDuplicateSelected = { fg = theme.ui.fg, bg = theme.ui.bg, italic = true, bold = true }
+	highlights.BufferLineDuplicateVisible = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim, italic = true }
+	highlights.BufferLineError = { fg = theme.diag.error, bg = theme.ui.bg_m3 }
+	highlights.BufferLineErrorDiagnostic = { fg = theme.diag.error, bg = theme.ui.bg_m3 }
+	highlights.BufferLineErrorDiagnosticSelected = { fg = theme.diag.error, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineErrorDiagnosticVisible = { fg = theme.diag.error, bg = theme.ui.bg_dim }
+	highlights.BufferLineErrorSelected = { fg = theme.diag.error, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineErrorVisible = { fg = theme.diag.error, bg = theme.ui.bg_dim }
+	highlights.BufferLineFill = { bg = theme.ui.bg_m1 }
+	highlights.BufferLineHint = { fg = theme.diag.hint, bg = theme.ui.bg_m3 }
+	highlights.BufferLineHintDiagnostic = { fg = theme.diag.hint, bg = theme.ui.bg_m3 }
+	highlights.BufferLineHintDiagnosticSelected = { fg = theme.diag.hint, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineHintDiagnosticVisible = { fg = theme.diag.hint, bg = theme.ui.bg_dim }
+	highlights.BufferLineHintSelected = { fg = theme.diag.hint, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineHintVisible = { fg = theme.diag.hint, bg = theme.ui.bg_dim }
+	highlights.BufferLineInfo = { fg = theme.diag.info, bg = theme.ui.bg_m3 }
+	highlights.BufferLineInfoDiagnostic = { fg = theme.diag.info, bg = theme.ui.bg_m3 }
+	highlights.BufferLineInfoDiagnosticSelected = { fg = theme.diag.info, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineInfoDiagnosticVisible = { fg = theme.diag.info, bg = theme.ui.bg_dim }
+	highlights.BufferLineInfoSelected = { fg = theme.diag.info, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineInfoVisible = { fg = theme.diag.info, bg = theme.ui.bg_dim }
+	highlights.BufferLineIndicatorSelected = { fg = theme.syn.special1, bg = theme.ui.bg }
+	highlights.BufferLineIndicatorVisible = { fg = theme.ui.special, bg = theme.ui.bg_dim }
+	highlights.BufferLineModified = { fg = theme.vcs.changed, bg = theme.ui.bg_m3 }
+	highlights.BufferLineModifiedSelected = { fg = theme.vcs.changed, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineModifiedVisible = { fg = theme.vcs.changed, bg = theme.ui.bg_dim }
+	highlights.BufferLineNumbers = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.BufferLineNumbersSelected = { fg = theme.ui.fg, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineNumbersVisible = { fg = theme.ui.fg_dim, bg = theme.ui.bg_dim }
+	highlights.BufferLineOffsetSeparator = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 }
+	highlights.BufferLinePick = { fg = theme.diag.warning, bg = theme.ui.bg_m3, bold = true }
+	highlights.BufferLinePickSelected = { fg = theme.diag.warning, bg = theme.ui.bg, bold = true }
+	highlights.BufferLinePickVisible = { fg = theme.diag.warning, bg = theme.ui.bg_dim, bold = true }
+	highlights.BufferLineSeparator = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m3 }
+	highlights.BufferLineSeparatorSelected = { fg = theme.ui.bg_m1, bg = theme.ui.bg }
+	highlights.BufferLineSeparatorVisible = { fg = theme.ui.bg_m1, bg = theme.ui.bg_dim }
+	highlights.BufferLineTab = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.BufferLineTabClose = { fg = theme.diag.error, bg = theme.ui.bg_m1 }
+	highlights.BufferLineTabSelected = { fg = theme.ui.fg, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineTabSeparator = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m3 }
+	highlights.BufferLineTabSeparatorSelected = { fg = theme.ui.bg_m1, bg = theme.ui.bg }
+	highlights.BufferLineTruncMarker = { fg = theme.ui.special, bg = theme.ui.bg_m3, bold = true }
+	highlights.BufferLineWarning = { fg = theme.diag.warning, bg = theme.ui.bg_m3 }
+	highlights.BufferLineWarningDiagnostic = { fg = theme.diag.warning, bg = theme.ui.bg_m3 }
+	highlights.BufferLineWarningDiagnosticSelected = { fg = theme.diag.warning, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineWarningDiagnosticVisible = { fg = theme.diag.warning, bg = theme.ui.bg_dim }
+	highlights.BufferLineWarningSelected = { fg = theme.diag.warning, bg = theme.ui.bg, bold = true }
+	highlights.BufferLineWarningVisible = { fg = theme.diag.warning, bg = theme.ui.bg_dim }
+
+	highlights.NoiceCmdline = { link = "MsgArea" }
+	highlights.NoiceCmdlineIcon = { fg = theme.syn.special1 }
+	highlights.NoiceCmdlineIconSearch = { fg = theme.diag.warning }
+	highlights.NoiceCmdlinePopup = { link = "NormalFloat" }
+	highlights.NoiceCmdlinePopupBorder = { link = "FloatBorder" }
+	highlights.NoiceCmdlinePopupBorderSearch = { link = "FloatBorder" }
+	highlights.NoiceCmdlinePrompt = { fg = theme.syn.special1, bold = true }
+	highlights.NoiceCompletionItemKindDefault = { link = "CmpItemKind" }
+	highlights.NoiceCompletionItemKindClass = { link = "CmpItemKindClass" }
+	highlights.NoiceCompletionItemKindColor = { link = "CmpItemKindColor" }
+	highlights.NoiceCompletionItemKindConstant = { link = "CmpItemKindConstant" }
+	highlights.NoiceCompletionItemKindConstructor = { link = "CmpItemKindConstructor" }
+	highlights.NoiceCompletionItemKindEnum = { link = "CmpItemKindEnum" }
+	highlights.NoiceCompletionItemKindEnumMember = { link = "CmpItemKindEnumMember" }
+	highlights.NoiceCompletionItemKindEvent = { link = "CmpItemKindEvent" }
+	highlights.NoiceCompletionItemKindField = { link = "CmpItemKindField" }
+	highlights.NoiceCompletionItemKindFile = { link = "CmpItemKindFile" }
+	highlights.NoiceCompletionItemKindFolder = { link = "CmpItemKindFolder" }
+	highlights.NoiceCompletionItemKindFunction = { link = "CmpItemKindFunction" }
+	highlights.NoiceCompletionItemKindInterface = { link = "CmpItemKindInterface" }
+	highlights.NoiceCompletionItemKindKeyword = { link = "CmpItemKindKeyword" }
+	highlights.NoiceCompletionItemKindMethod = { link = "CmpItemKindMethod" }
+	highlights.NoiceCompletionItemKindModule = { link = "CmpItemKindModule" }
+	highlights.NoiceCompletionItemKindOperator = { link = "CmpItemKindOperator" }
+	highlights.NoiceCompletionItemKindProperty = { link = "CmpItemKindProperty" }
+	highlights.NoiceCompletionItemKindReference = { link = "CmpItemKindReference" }
+	highlights.NoiceCompletionItemKindSnippet = { link = "CmpItemKindSnippet" }
+	highlights.NoiceCompletionItemKindStruct = { link = "CmpItemKindStruct" }
+	highlights.NoiceCompletionItemKindText = { link = "CmpItemKindText" }
+	highlights.NoiceCompletionItemKindTypeParameter = { link = "CmpItemKindTypeParameter" }
+	highlights.NoiceCompletionItemKindUnit = { link = "CmpItemKindUnit" }
+	highlights.NoiceCompletionItemKindValue = { link = "CmpItemKindValue" }
+	highlights.NoiceCompletionItemKindVariable = { link = "CmpItemKindVariable" }
+	highlights.NoiceConfirm = { link = "NormalFloat" }
+	highlights.NoiceConfirmBorder = { link = "FloatBorder" }
+	highlights.NoiceCursor = { link = "Cursor" }
+	highlights.NoiceFormatConfirm = { link = "MsgArea" }
+	highlights.NoiceFormatConfirmDefault = { fg = theme.ui.fg, bg = theme.ui.bg_p1, bold = true }
+	highlights.NoiceFormatDate = { fg = theme.syn.comment }
+	highlights.NoiceFormatEvent = { fg = theme.syn.special2 }
+	highlights.NoiceFormatKind = { fg = theme.syn.special1 }
+	highlights.NoiceFormatLevelDebug = { fg = theme.syn.comment }
+	highlights.NoiceFormatLevelError = { fg = theme.diag.error }
+	highlights.NoiceFormatLevelInfo = { fg = theme.diag.info }
+	highlights.NoiceFormatLevelOff = { fg = theme.syn.comment }
+	highlights.NoiceFormatLevelTrace = { fg = theme.syn.special1 }
+	highlights.NoiceFormatLevelWarn = { fg = theme.diag.warning }
+	highlights.NoiceFormatProgressDone = { fg = theme.ui.bg, bg = theme.diag.ok, bold = true }
+	highlights.NoiceFormatProgressTodo = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 }
+	highlights.NoiceFormatTitle = { fg = theme.syn.fun, bold = true }
+	highlights.NoiceLspProgressClient = { fg = theme.syn.fun }
+	highlights.NoiceLspProgressSpinner = { fg = theme.syn.special1 }
+	highlights.NoiceLspProgressTitle = { fg = theme.ui.fg }
+	highlights.NoiceMini = { link = "MsgArea" }
+	highlights.NoicePopup = { link = "NormalFloat" }
+	highlights.NoicePopupBorder = { link = "FloatBorder" }
+	highlights.NoicePopupmenu = { link = "Pmenu" }
+	highlights.NoicePopupmenuBorder = { link = "FloatBorder" }
+	highlights.NoicePopupmenuMatch = { fg = theme.syn.fun, bold = true }
+	highlights.NoicePopupmenuSelected = { link = "PmenuSel" }
+	highlights.NoiceScrollbar = { fg = theme.ui.bg_p2, bg = theme.ui.bg_p1 }
+	highlights.NoiceScrollbarThumb = { fg = theme.ui.special, bg = theme.ui.bg_p2 }
+	highlights.NoiceSplit = { link = "NormalFloat" }
+	highlights.NoiceSplitBorder = { link = "FloatBorder" }
+	highlights.NoiceVirtualText = { fg = theme.syn.comment }
 
 	return highlights
 end
