@@ -5,7 +5,10 @@ local M = {}
 ---@return table<string,HlSpec>
 function M.setup(theme, config)
 	return {
-		Comment = { fg = theme.syn.comment, italic = true },
+		Bold = { bold = true },
+		Italic = { italic = true },
+
+		Comment = vim.tbl_extend("force", { fg = theme.syn.comment }, config.commentStyle),
 		Constant = { fg = theme.syn.constant },
 		String = { fg = theme.syn.string },
 		Character = { fg = theme.syn.string },
@@ -14,14 +17,14 @@ function M.setup(theme, config)
 		Float = { fg = theme.syn.number, italic = true },
 
 		Identifier = { fg = theme.syn.identifier },
-		Function = { fg = theme.syn.fun, italic = true },
+		Function = vim.tbl_extend("force", { fg = theme.syn.fun }, config.functionStyle),
 
-		Statement = { fg = theme.syn.statement },
+		Statement = vim.tbl_extend("force", { fg = theme.syn.statement }, config.statementStyle),
 		Conditional = { fg = theme.syn.control_flow, italic = true, bold = true },
 		Repeat = { fg = theme.syn.control_flow, italic = true, bold = true },
 		Label = { fg = theme.syn.label },
 		Operator = { fg = theme.syn.operator },
-		Keyword = { fg = theme.syn.keyword },
+		Keyword = vim.tbl_extend("force", { fg = theme.syn.keyword }, config.keywordStyle),
 		Exception = { fg = theme.syn.control_flow, italic = true, bold = true },
 
 		PreProc = { fg = theme.syn.preproc },
@@ -30,7 +33,7 @@ function M.setup(theme, config)
 		Macro = { fg = theme.syn.preproc },
 		PreCondit = { fg = theme.syn.preproc },
 
-		Type = { fg = theme.syn.type },
+		Type = vim.tbl_extend("force", { fg = theme.syn.type }, config.typeStyle),
 		StorageClass = { fg = theme.syn.keyword },
 		Structure = { fg = theme.syn.type },
 		Typedef = { fg = theme.syn.type },
@@ -66,6 +69,7 @@ function M.setup(theme, config)
 		markdownH1 = { fg = theme.syn.fun, bold = true },
 		markdownH2 = { fg = theme.syn.fun, bold = true },
 		markdownLinkText = { fg = theme.syn.fun, underline = true },
+		markdownEscape = { fg = "NONE" },
 	}
 end
 

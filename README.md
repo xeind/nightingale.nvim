@@ -119,7 +119,7 @@ The theme uses a carefully selected palette of warm, comfortable colors designed
 
 ## Acknowledgments
 
-- Original [Nightingale VS Code theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme) by bfrangi
+- Original [Nightingale VS Code Theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme) by bfrangi
 - Theme structure inspired by [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 
 ## License

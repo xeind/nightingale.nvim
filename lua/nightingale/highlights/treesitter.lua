@@ -56,6 +56,7 @@ function M.setup(theme, config)
 		["@function.setter"] = { fg = theme.syn.fun, bold = true },
 
 		["@constructor"] = { fg = theme.syn.constructor },
+		["@constructor.lua"] = { fg = theme.syn.punct },
 		["@operator"] = { fg = theme.syn.operator },
 
 		["@keyword"] = { fg = theme.syn.keyword },
@@ -66,13 +67,14 @@ function M.setup(theme, config)
 		["@keyword.type"] = { fg = theme.syn.keyword },
 		["@keyword.modifier"] = { fg = theme.syn.keyword, italic = true },
 		["@keyword.repeat"] = { fg = theme.syn.control_flow, italic = true, bold = true },
-		["@keyword.return"] = { fg = theme.syn.special3, italic = true, bold = true },
+		["@keyword.return"] = vim.tbl_extend("force", { fg = theme.syn.statement }, config.keywordStyle),
 		["@keyword.debug"] = { fg = theme.syn.keyword },
-		["@keyword.exception"] = { fg = theme.syn.special3, italic = true, bold = true },
+		["@keyword.exception"] = vim.tbl_extend("force", { fg = theme.syn.special3 }, config.keywordStyle),
 		["@keyword.conditional"] = { fg = theme.syn.control_flow, italic = true, bold = true },
 		["@keyword.conditional.ternary"] = { fg = theme.syn.operator },
 		["@keyword.directive"] = { fg = theme.syn.preproc },
 		["@keyword.directive.define"] = { fg = theme.syn.preproc },
+		["@keyword.luap"] = { fg = theme.syn.special1 },
 
 		["@punctuation.delimiter"] = { fg = theme.syn.punct },
 		["@punctuation.bracket"] = { fg = theme.syn.punct },
@@ -107,6 +109,7 @@ function M.setup(theme, config)
 
 		["@markup.raw"] = { fg = theme.syn.string },
 		["@markup.raw.block"] = { fg = theme.syn.string },
+		["@markup.environment"] = { fg = theme.syn.preproc },
 
 		["@markup.list"] = { fg = theme.syn.special1 },
 		["@markup.list.checked"] = { fg = theme.diag.ok },

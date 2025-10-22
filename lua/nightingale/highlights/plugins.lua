@@ -14,6 +14,15 @@ function M.setup(theme, config)
 	highlights.GitGutterChange = { link = "GitSignsChange" }
 	highlights.GitGutterDelete = { link = "GitSignsDelete" }
 
+	highlights.TreesitterContext = { link = "Folded" }
+	highlights.TreesitterContextLineNumber = { fg = theme.ui.special, bg = theme.ui.bg_gutter }
+
+	highlights.FloatermBorder = { link = "FloatBorder" }
+
+	highlights.healthError = { fg = theme.diag.error }
+	highlights.healthSuccess = { fg = theme.diag.ok }
+	highlights.healthWarning = { fg = theme.diag.warning }
+
 	highlights.NeogitDiffContextHighlight = { bg = theme.diff.change }
 	highlights.NeogitHunkHeader = { fg = theme.syn.fun }
 	highlights.NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change }
@@ -21,25 +30,34 @@ function M.setup(theme, config)
 	highlights.NeogitDiffDeleteHighlight = { bg = theme.diff.delete }
 
 	highlights.TelescopeBorder = { link = "FloatBorder" }
+	highlights.TelescopeTitle = { fg = theme.ui.special }
 	highlights.TelescopeNormal = { link = "NormalFloat" }
-	highlights.TelescopeSelection = { fg = theme.ui.fg, bg = theme.ui.bg_p2 }
-	highlights.TelescopeSelectionCaret = { fg = theme.diag.warning, bg = theme.ui.bg_p2 }
+	highlights.TelescopeSelection = { link = "CursorLine" }
+	highlights.TelescopeSelectionCaret = { link = "CursorLineNr" }
 	highlights.TelescopeMultiSelection = { fg = theme.syn.special1, bg = theme.ui.bg_p1 }
 	highlights.TelescopeMatching = { fg = theme.diag.info, bold = true }
 	highlights.TelescopePromptPrefix = { fg = theme.diag.info }
+	highlights.TelescopeResultsClass = { link = "Structure" }
+	highlights.TelescopeResultsStruct = { link = "Structure" }
+	highlights.TelescopeResultsField = { link = "@variable.member" }
+	highlights.TelescopeResultsMethod = { link = "Function" }
+	highlights.TelescopeResultsVariable = { link = "@variable" }
 
-	highlights.NvimTreeFolderName = { fg = theme.syn.fun }
-	highlights.NvimTreeFolderIcon = { fg = theme.syn.fun }
-	highlights.NvimTreeEmptyFolderName = { fg = theme.syn.comment }
-	highlights.NvimTreeOpenedFolderName = { fg = theme.syn.fun, bold = true }
-	highlights.NvimTreeIndentMarker = { fg = theme.ui.indent_line }
+	highlights.NvimTreeNormal = { link = "Normal" }
+	highlights.NvimTreeNormalNC = { link = "NvimTreeNormal" }
+	highlights.NvimTreeRootFolder = { fg = theme.syn.identifier, bold = true }
 	highlights.NvimTreeGitDirty = { fg = theme.vcs.changed }
 	highlights.NvimTreeGitNew = { fg = theme.vcs.added }
 	highlights.NvimTreeGitDeleted = { fg = theme.vcs.removed }
+	highlights.NvimTreeGitStaged = { fg = theme.vcs.added }
 	highlights.NvimTreeSpecialFile = { fg = theme.syn.special1 }
 	highlights.NvimTreeImageFile = { fg = theme.syn.special2 }
-	highlights.NvimTreeSymlink = { fg = theme.syn.special3 }
-	highlights.NvimTreeRootFolder = { fg = theme.diag.info, bold = true }
+	highlights.NvimTreeSymlink = { link = "Type" }
+	highlights.NvimTreeFolderName = { link = "Directory" }
+	highlights.NvimTreeExecFile = { fg = theme.syn.string, bold = true }
+	highlights.NvimTreeOpenedFile = { fg = theme.syn.special1, italic = true }
+	highlights.NvimTreeWinSeparator = { link = "WinSeparator" }
+	highlights.NvimTreeWindowPicker = { bg = theme.ui.bg_m1, fg = theme.syn.special1, bold = true }
 
 	highlights.NeoTreeNormal = { link = "NormalFloat" }
 	highlights.NeoTreeNormalNC = { link = "NormalFloat" }
@@ -120,18 +138,113 @@ function M.setup(theme, config)
 
 	highlights.MiniTrailspace = { bg = theme.vcs.removed }
 
-	highlights.CmpItemAbbrDeprecated = { fg = theme.syn.deprecated, strikethrough = true }
-	highlights.CmpItemAbbrMatch = { fg = theme.diag.info }
-	highlights.CmpItemAbbrMatchFuzzy = { fg = theme.diag.info }
-	highlights.CmpItemKindVariable = { fg = theme.syn.variable }
-	highlights.CmpItemKindInterface = { fg = theme.syn.type }
+	highlights.MiniAnimateCursor = { reverse = true, nocombine = true }
+	highlights.MiniAnimateNormalFloat = { link = "NormalFloat" }
+
+	highlights.MiniClueBorder = { link = "FloatBorder" }
+	highlights.MiniClueDescGroup = { link = "DiagnosticFloatingWarn" }
+	highlights.MiniClueDescSingle = { link = "NormalFloat" }
+	highlights.MiniClueNextKey = { link = "DiagnosticFloatingHint" }
+	highlights.MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" }
+	highlights.MiniClueSeparator = { link = "DiagnosticFloatingInfo" }
+	highlights.MiniClueTitle = { link = "FloatTitle" }
+
+	highlights.MiniCompletionActiveParameter = { underline = true }
+
+	highlights.MiniDepsChangeAdded = { link = "diffAdded" }
+	highlights.MiniDepsChangeRemoved = { link = "diffRemoved" }
+	highlights.MiniDepsHint = { fg = theme.diag.hint }
+	highlights.MiniDepsInfo = { fg = theme.diag.info }
+	highlights.MiniDepsMsgBreaking = { fg = theme.diag.warning }
+	highlights.MiniDepsPlaceholder = { link = "Comment" }
+	highlights.MiniDepsTitle = { link = "Title" }
+	highlights.MiniDepsTitleError = { link = "DiffDelete" }
+	highlights.MiniDepsTitleSame = { link = "DiffText" }
+	highlights.MiniDepsTitleUpdate = { link = "DiffAdd" }
+
+	highlights.MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" }
+	highlights.MiniFilesTitleFocused = { fg = theme.ui.fg, bg = theme.ui.float_bg, bold = true }
+
+	highlights.MiniHipatternsFixme = { fg = theme.ui.bg, bg = theme.diag.error, bold = true }
+	highlights.MiniHipatternsHack = { fg = theme.ui.bg, bg = theme.diag.warning, bold = true }
+	highlights.MiniHipatternsNote = { fg = theme.ui.bg, bg = theme.diag.info, bold = true }
+	highlights.MiniHipatternsTodo = { fg = theme.ui.bg, bg = theme.diag.hint, bold = true }
+
+	highlights.MiniIconsAzure = { fg = theme.syn.special1 }
+	highlights.MiniIconsBlue = { fg = theme.syn.fun }
+	highlights.MiniIconsCyan = { fg = theme.syn.type }
+	highlights.MiniIconsGreen = { fg = theme.syn.string }
+	highlights.MiniIconsGrey = { fg = theme.ui.fg }
+	highlights.MiniIconsOrange = { fg = theme.syn.constant }
+	highlights.MiniIconsPurple = { fg = theme.syn.keyword }
+	highlights.MiniIconsRed = { fg = theme.syn.special3 }
+	highlights.MiniIconsYellow = { fg = theme.syn.identifier }
+
+	highlights.MiniIndentscopePrefix = { nocombine = true }
+
+	highlights.MiniJump = { link = "SpellRare" }
+
+	highlights.MiniJump2dDim = { link = "Comment" }
+	highlights.MiniJump2dSpotAhead = { fg = theme.diag.hint, bg = theme.ui.bg_dim, nocombine = true }
+	highlights.MiniJump2dSpotUnique = { fg = theme.syn.special1, bold = true, nocombine = true }
+
+	highlights.MiniMapNormal = { link = "NormalFloat" }
+	highlights.MiniMapSymbolCount = { link = "Special" }
+	highlights.MiniMapSymbolLine = { link = "Title" }
+	highlights.MiniMapSymbolView = { link = "Delimiter" }
+
+	highlights.MiniNotifyBorder = { link = "FloatBorder" }
+	highlights.MiniNotifyNormal = { link = "NormalFloat" }
+	highlights.MiniNotifyTitle = { link = "FloatTitle" }
+
+	highlights.MiniOperatorsExchangeFrom = { link = "IncSearch" }
+
+	highlights.MiniPickBorder = { link = "FloatBorder" }
+	highlights.MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" }
+	highlights.MiniPickBorderText = { link = "FloatTitle" }
+	highlights.MiniPickIconDirectory = { link = "Directory" }
+	highlights.MiniPickIconFile = { link = "MiniPickNormal" }
+	highlights.MiniPickHeader = { link = "DiagnosticFloatingHint" }
+	highlights.MiniPickMatchCurrent = { link = "CursorLine" }
+	highlights.MiniPickMatchMarked = { link = "Visual" }
+	highlights.MiniPickMatchRanges = { link = "DiagnosticFloatingHint" }
+	highlights.MiniPickNormal = { link = "NormalFloat" }
+	highlights.MiniPickPreviewLine = { link = "CursorLine" }
+	highlights.MiniPickPreviewRegion = { link = "IncSearch" }
+	highlights.MiniPickPrompt = { fg = theme.syn.fun, bg = theme.ui.float_bg }
+
+	highlights.MiniSurround = { link = "IncSearch" }
+
+	highlights.CmpDocumentation = { link = "NormalFloat" }
+	highlights.CmpDocumentationBorder = { link = "FloatBorder" }
+	highlights.CmpCompletion = { link = "Pmenu" }
+	highlights.CmpCompletionSel = { link = "PmenuSel" }
+	highlights.CmpCompletionBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg }
+	highlights.CmpCompletionThumb = { link = "PmenuThumb" }
+	highlights.CmpCompletionSbar = { link = "PmenuSbar" }
+	highlights.CmpItemAbbr = { fg = theme.ui.pmenu.fg }
+	highlights.CmpItemAbbrDeprecated = { fg = theme.syn.comment, strikethrough = true }
+	highlights.CmpItemAbbrMatch = { fg = theme.syn.fun }
+	highlights.CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" }
+	highlights.CmpItemKindDefault = { fg = theme.ui.fg_dim }
+	highlights.CmpItemMenu = { fg = theme.ui.fg_dim }
+	highlights.CmpGhostText = { fg = theme.syn.comment }
+
 	highlights.CmpItemKindText = { fg = theme.ui.fg }
-	highlights.CmpItemKindFunction = { fg = theme.syn.fun }
-	highlights.CmpItemKindMethod = { fg = theme.syn.fun }
-	highlights.CmpItemKindKeyword = { fg = theme.syn.keyword }
-	highlights.CmpItemKindProperty = { fg = theme.syn.identifier }
-	highlights.CmpItemKindUnit = { fg = theme.syn.constant }
-	highlights.CmpItemKindSnippet = { fg = theme.syn.special1 }
+	highlights.CmpItemKindMethod = { link = "@function.method" }
+	highlights.CmpItemKindFunction = { link = "Function" }
+	highlights.CmpItemKindConstructor = { link = "@constructor" }
+	highlights.CmpItemKindField = { link = "@variable.member" }
+	highlights.CmpItemKindVariable = { fg = theme.ui.fg_dim }
+	highlights.CmpItemKindClass = { link = "Type" }
+	highlights.CmpItemKindInterface = { link = "Type" }
+	highlights.CmpItemKindModule = { link = "@module" }
+	highlights.CmpItemKindProperty = { link = "@property" }
+	highlights.CmpItemKindUnit = { link = "Number" }
+	highlights.CmpItemKindValue = { link = "String" }
+	highlights.CmpItemKindEnum = { link = "Type" }
+	highlights.CmpItemKindKeyword = { link = "Keyword" }
+	highlights.CmpItemKindSnippet = { link = "Special" }
 	highlights.CmpItemKindColor = { link = "Special" }
 	highlights.CmpItemKindFile = { link = "Directory" }
 	highlights.CmpItemKindReference = { link = "Special" }
