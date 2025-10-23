@@ -47,9 +47,9 @@ local palette = {
 	selectionHighlight = "#373737",
 	wordHighlight = "#6363634d",
 	wordHighlightBorder = "#5a5a5a",
-	search = "#FF9E3B", -- editor.findMatchBorder
-	searchBg = "#3e3e3e", -- editor.findMatchBackground
-	searchHighlight = "#444444",
+	search = "#FF9E3B", -- editor.findMatchBorder (current match border)
+	searchBg = "#3e3e3e", -- editor.findMatchBackground (current match bg)
+	searchHighlightBg = "#444444", -- editor.findMatchHighlightBackground (other matches)
 	visualSelection = "#283c57", -- terminal.selectionBackground
 
 	-- Syntax colors (from tokenColors)

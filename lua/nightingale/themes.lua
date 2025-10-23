@@ -55,6 +55,7 @@
 ---@field nontext ColorSpec
 ---@field whitespace ColorSpec
 ---@field bg_search ColorSpec
+---@field bg_search_highlight ColorSpec
 ---@field bg_visual ColorSpec
 ---@field cursor_line_nr_foreground ColorSpec
 ---@field cursor_line_nr_active_foreground ColorSpec
@@ -110,6 +111,7 @@ return {
 
 				bg_visual = palette.selection,
 				bg_search = palette.searchBg,
+				bg_search_highlight = palette.searchHighlightBg,
 
 				cursor_line_nr_foreground = palette.gray2,
 				cursor_line_nr_active_foreground = palette.fg2,

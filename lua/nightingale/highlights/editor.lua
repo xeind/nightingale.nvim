@@ -11,7 +11,7 @@ function M.setup(theme, config)
 	return {
 		ColorColumn = { bg = theme.ui.bg_p2 },
 		Conceal = { fg = theme.ui.special, bold = true },
-		CurSearch = { bg = theme.ui.bg_search, fg = theme.ui.fg },
+		CurSearch = { bg = theme.ui.bg_search, fg = theme.ui.fg }, -- Current match (darker with orange border)
 		Cursor = { fg = theme.ui.cursor_fg, bg = theme.ui.cursor_bg },
 		lCursor = { link = "Cursor" },
 		CursorIM = { link = "Cursor" },
@@ -65,7 +65,7 @@ function M.setup(theme, config)
 		PmenuBorder = { link = "FloatBorder" },
 		Question = { fg = theme.diag.info },
 		QuickFixLine = { bg = theme.ui.bg_visual },
-		Search = { fg = theme.ui.fg, bg = theme.ui.bg_search },
+		Search = { fg = theme.ui.fg, bg = theme.ui.bg_search_highlight }, -- Other matches (lighter for visibility)
 		IncSearch = { fg = theme.ui.bg, bg = theme.diag.warning },
 		SpecialKey = { fg = theme.ui.nontext },
 		SpellBad = { undercurl = true, sp = theme.diag.error },
