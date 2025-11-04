@@ -144,43 +144,43 @@ local palette = {
 	special = "#569cd6",
 
 	-- Light theme colors (lightingale variant)
-	-- Backgrounds (inverted - light shades)
-	lightBg0 = "#f8f8f8", -- main editor background
-	lightBg1 = "#f0f0f0", -- tab background
-	lightBg2 = "#e8e8e8", -- status bar
-	lightBg3 = "#e0e0e0", -- widgets
-	lightBg4 = "#d8d8d8", -- line highlight
-	lightBg5 = "#d0d0d0", -- title bar
+	-- Backgrounds (inverted - light shades) - Brighter for better contrast
+	lightBg0 = "#ffffff", -- main editor background (pure white for max contrast)
+	lightBg1 = "#f5f5f5", -- tab background
+	lightBg2 = "#ebebeb", -- status bar
+	lightBg3 = "#e6e6e6", -- widgets
+	lightBg4 = "#f0f0f0", -- line highlight (subtle)
+	lightBg5 = "#d8d8d8", -- title bar
 	lightBg6 = "#ffffff", -- terminal background (pure white)
-	lightBg7 = "#f5f5f5", -- widget background
+	lightBg7 = "#f8f8f8", -- widget background
 
 	-- Light UI backgrounds
-	lightActivityBarBg = "#ececec",
-	lightSideBarBg = "#f8f8f8",
-	lightListActiveBg = "#e4e4e4",
+	lightActivityBarBg = "#f0f0f0",
+	lightSideBarBg = "#fafafa",
+	lightListActiveBg = "#e8e8e8",
 	lightInputBg = "#ffffff",
 
 	-- Light borders
-	lightBorder0 = "#e5e5e5",
-	lightBorder1 = "#d0d0d0",
-	lightBorder2 = "#c0c0c0",
+	lightBorder0 = "#e0e0e0",
+	lightBorder1 = "#c8c8c8",
+	lightBorder2 = "#b0b0b0",
 
-	-- Light foregrounds
-	lightFg = "#1a1a1a", -- main foreground
-	lightFg2 = "#2a2a2a", -- primary text
-	lightFg3 = "#3a3a3a", -- secondary text
-	lightFgDim = "#5a5a5a", -- dimmed text
+	-- Light foregrounds - Darker for better contrast
+	lightFg = "#0a0a0a", -- main foreground (very dark)
+	lightFg2 = "#1a1a1a", -- primary text
+	lightFg3 = "#2a2a2a", -- secondary text
+	lightFgDim = "#4a4a4a", -- dimmed text
 
-	-- Light variable color
-	lightVariable = "#2c2814", -- darker version of variable
+	-- Light variable color - Darker
+	lightVariable = "#1a1408", -- darker version of variable
 
-	-- Light grays
-	lightGray = "#8a8a7a", -- comments (lighter than dark)
-	lightGray2 = "#a0a0a0", -- line numbers
-	lightGray3 = "#707070",
-	lightGray4 = "#808080",
-	lightGray5 = "#b5b5b5", -- focus border
-	lightGray6 = "#6a6a6a", -- unused/unnecessary
+	-- Light grays - Darker for better readability
+	lightGray = "#6a7a6a", -- comments (darker for better contrast)
+	lightGray2 = "#909090", -- line numbers
+	lightGray3 = "#606060",
+	lightGray4 = "#707070",
+	lightGray5 = "#a8a8a8", -- focus border
+	lightGray6 = "#5a5a5a", -- unused/unnecessary
 
 	-- Light indent guides
 	lightIndentGuide = "#e8e8e8",
