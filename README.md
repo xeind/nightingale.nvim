@@ -2,14 +2,27 @@
 
 ![Nightingale Theme](./preview.jpg)
 
-A dark Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions.
+A Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions. Available in both dark and light variants.
+
+## Variants
+
+### Nightingale (Dark)
 
 The theme uses a carefully selected palette of warm, comfortable colors designed for long coding sessions:
 
-- Background: Deep warm dark tones
+- Background: Deep warm dark tones (`#202020`)
 - Foreground: Soft cream/beige
 - Syntax: Greens, blues, purples, and warm accent colors
 - UI: Subtle grays and warm borders
+
+### Lightingale (Light)
+
+A light variant with inverted colors from the dark theme, maintaining the same visual harmony:
+
+- Background: Soft light gray (`#dfdfdf`)
+- Foreground: Very dark gray for excellent contrast
+- Syntax: Darkened, saturated colors optimized for light backgrounds
+- UI: Clean, comfortable interface perfect for bright environments
 
 ## Features
 
@@ -71,7 +84,7 @@ vim.cmd("colorscheme nightingale")
 
 ## Usage
 
-As simple as:
+### Dark Theme (Nightingale)
 
 ```vim
 colorscheme nightingale
@@ -79,6 +92,25 @@ colorscheme nightingale
 
 ```lua
 vim.cmd("colorscheme nightingale")
+```
+
+### Light Theme (Lightingale)
+
+```vim
+colorscheme lightingale
+```
+
+```lua
+vim.cmd("colorscheme lightingale")
+```
+
+### Switching via Lua Setup
+
+```lua
+require("nightingale").setup({
+    theme = "lightingale",  -- or "nightingale" for dark
+})
+vim.cmd("colorscheme lightingale")
 ```
 
 ## Configuration
@@ -99,9 +131,13 @@ require('nightingale').setup({
     transparent = false,         -- do not set background color
     dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+    theme = "nightingale",       -- "nightingale" (dark) or "lightingale" (light)
     colors = {                   -- add/modify theme and palette colors
         palette = {},
-        theme = { nightingale = {} },
+        theme = {
+            nightingale = {},    -- dark theme overrides
+            lightingale = {}     -- light theme overrides
+        },
     },
     overrides = function(colors) -- add/modify highlights
         return {}
@@ -116,6 +152,9 @@ vim.cmd("colorscheme nightingale")
 
 ```lua
 require('nightingale').setup({
+    -- Use light theme variant
+    theme = "lightingale",
+
     -- Enable transparent background
     transparent = true,
 
@@ -141,6 +180,28 @@ require('nightingale').setup({
         }
     end,
 })
+```
+
+### Toggle Between Light and Dark
+
+```lua
+-- Switch to dark theme
+require('nightingale').load('nightingale')
+
+-- Switch to light theme
+require('nightingale').load('lightingale')
+```
+
+You can bind these to keymaps for easy theme switching:
+
+```lua
+vim.keymap.set('n', '<leader>td', function()
+    require('nightingale').load('nightingale')
+end, { desc = 'Dark theme' })
+
+vim.keymap.set('n', '<leader>tl', function()
+    require('nightingale').load('lightingale')
+end, { desc = 'Light theme' })
 ```
 
 ## Acknowledgments
