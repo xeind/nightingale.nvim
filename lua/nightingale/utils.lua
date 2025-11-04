@@ -1,16 +1,21 @@
 local M = {}
 local PATH_SEP = vim.uv.os_uname().version:match("Windows") and "\\" or "/"
 
-local get_compiled_path = function()
-	return table.concat({ vim.fn.stdpath("state"), "nightingale", "nightingale_compiled.lua" }, PATH_SEP)
+local get_compiled_path = function(theme)
+	theme = theme or "nightingale"
+	return table.concat(
+		{ vim.fn.stdpath("state"), "nightingale", theme .. "_compiled.lua" },
+		PATH_SEP
+	)
 end
 
+---@param theme string
 ---@param highlights table
 ---@param termcolors table
-function M.compile(highlights, termcolors)
+function M.compile(theme, highlights, termcolors)
 	vim.uv.fs_mkdir(vim.fn.stdpath("state") .. PATH_SEP .. "nightingale", 448)
 
-	local fname = get_compiled_path()
+	local fname = get_compiled_path(theme)
 	local file, err = io.open(fname, "wb")
 	if not file or err then
 		vim.notify("Nightingale: Error writing " .. fname .. ":\n" .. err, vim.log.levels.ERROR)
@@ -39,9 +44,10 @@ function M.compile(highlights, termcolors)
 	file:close()
 end
 
+---@param theme? string
 ---@return boolean status
-function M.load_compiled()
-	local f = loadfile(get_compiled_path())
+function M.load_compiled(theme)
+	local f = loadfile(get_compiled_path(theme))
 	if f then
 		f()
 		return true

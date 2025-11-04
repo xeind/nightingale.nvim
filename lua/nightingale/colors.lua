@@ -142,25 +142,179 @@ local palette = {
 
 	-- Special
 	special = "#569cd6",
+
+	-- Light theme colors (lightingale variant)
+	-- Backgrounds (inverted - light shades)
+	lightBg0 = "#f8f8f8", -- main editor background
+	lightBg1 = "#f0f0f0", -- tab background
+	lightBg2 = "#e8e8e8", -- status bar
+	lightBg3 = "#e0e0e0", -- widgets
+	lightBg4 = "#d8d8d8", -- line highlight
+	lightBg5 = "#d0d0d0", -- title bar
+	lightBg6 = "#ffffff", -- terminal background (pure white)
+	lightBg7 = "#f5f5f5", -- widget background
+
+	-- Light UI backgrounds
+	lightActivityBarBg = "#ececec",
+	lightSideBarBg = "#f8f8f8",
+	lightListActiveBg = "#e4e4e4",
+	lightInputBg = "#ffffff",
+
+	-- Light borders
+	lightBorder0 = "#e5e5e5",
+	lightBorder1 = "#d0d0d0",
+	lightBorder2 = "#c0c0c0",
+
+	-- Light foregrounds
+	lightFg = "#1a1a1a", -- main foreground
+	lightFg2 = "#2a2a2a", -- primary text
+	lightFg3 = "#3a3a3a", -- secondary text
+	lightFgDim = "#5a5a5a", -- dimmed text
+
+	-- Light variable color
+	lightVariable = "#2c2814", -- darker version of variable
+
+	-- Light grays
+	lightGray = "#8a8a7a", -- comments (lighter than dark)
+	lightGray2 = "#a0a0a0", -- line numbers
+	lightGray3 = "#707070",
+	lightGray4 = "#808080",
+	lightGray5 = "#b5b5b5", -- focus border
+	lightGray6 = "#6a6a6a", -- unused/unnecessary
+
+	-- Light indent guides
+	lightIndentGuide = "#e8e8e8",
+	lightIndentGuideActive = "#d0d0d0",
+
+	-- Light selection and search
+	lightSelection = "#d8d8d8",
+	lightSelectionHighlight = "#d0d0d0",
+	lightWordHighlight = "#e0e0e0b0",
+	lightWordHighlightBorder = "#b8b8b8",
+	lightSearch = "#d67b00", -- darker orange for visibility
+	lightSearchBg = "#ffeec2", -- light yellow background
+	lightSearchHighlightBg = "#ffe8b3", -- slightly darker yellow
+	lightVisualSelection = "#c5d9ea", -- light blue selection
+
+	-- Syntax colors adjusted for light background
+	lightBlue = "#4a7bb8", -- functions (darker)
+	lightBlue2 = "#5a6ba0", -- HTML tags
+	lightBlue3 = "#3d7090", -- terminal.ansiBlue
+	lightBlue4 = "#3a92b8", -- terminal.ansiBrightBlue
+	lightBlue5 = "#3d6fb8", -- badges/buttons
+	lightBlue6 = "#0066cc", -- text links
+	lightBlue7 = "#4a6578", -- hover widget
+	lightBlue8 = "#4a8ac0", -- CSS properties
+	lightBlue9 = "#3d6fb8", -- markdown list
+
+	lightCyan = "#2a8070", -- types
+	lightCyan2 = "#5a7890", -- terminal.ansiCyan
+	lightCyan3 = "#4a9495", -- terminal.ansiBrightCyan
+
+	lightPurple = "#7a5a98", -- control flow
+	lightPurple2 = "#6a5588", -- terminal.ansiMagenta
+	lightPurple3 = "#a85070", -- terminal.ansiBrightMagenta
+	lightPurple4 = "#a060c0", -- Django tags
+
+	lightGreen = "#5a8840", -- strings
+	lightGreen2 = "#5a9440", -- terminal.ansiGreen
+	lightGreen3 = "#6aa850", -- terminal.ansiBrightGreen
+	lightGreen4 = "#4a6a40", -- git added
+
+	lightYellow = "#8a8a40", -- regex
+	lightYellow2 = "#c09000", -- terminal.ansiYellow
+	lightYellow3 = "#b09050", -- terminal.ansiBrightYellow
+	lightYellow4 = "#a89850", -- regex quantifier
+	lightYellow5 = "#c0a020", -- markdown links
+	lightYellow6 = "#b09040", -- operators
+	lightYellow7 = "#b8a050", -- Django variables
+	lightYellow8 = "#a8905a", -- property declaration
+
+	lightOrange = "#c06840", -- constants/enums
+	lightOrange2 = "#d07030", -- JSON keys level 2
+	lightOrange3 = "#b05020", -- markdown separator
+	lightOrange4 = "#d08840", -- preformat text
+
+	lightRed = "#c82020", -- invalid
+	lightRed2 = "#b02020", -- terminal.ansiRed
+	lightRed3 = "#d82828", -- terminal.ansiBrightRed
+	lightRed4 = "#c00000", -- errors
+	lightRed5 = "#d84848", -- regex string
+	lightRed6 = "#902020", -- git deleted
+	lightRed7 = "#c01010", -- debug status
+
+	lightPink = "#c86860", -- object keys
+	lightPink2 = "#b87050", -- regex groups
+	lightPink3 = "#a85068", -- JSON keys level 0
+	lightPink4 = "#c04858", -- markup italic
+	lightPink5 = "#d06848", -- strings in HTML
+
+	lightAqua = "#2a6a90", -- CSS elements
+
+	-- Light numbers
+	lightNumber = "#c84040", -- numeric constants
+
+	-- Light escape characters
+	lightEscape = "#987830", -- escape sequences
+
+	-- Light diff colors
+	lightDiffAdd = "#d4f0d0",
+	lightDiffChange = "#f0e8c8",
+	lightDiffDelete = "#f0d0d4",
+	lightDiffText = "#e8e8f0",
+
+	-- Light git colors
+	lightGitAdded = "#4a6a40",
+	lightGitRemoved = "#902020",
+	lightGitChanged = "#b08830",
+	lightGitIgnored = "#8a8a7a",
+
+	-- Light diagnostic colors
+	lightError = "#c00000",
+	lightWarning = "#d67b00",
+	lightInfo = "#4a6578",
+	lightHint = "#4a6a40",
+
+	-- Light bracket colors
+	lightBracket1 = "#b09050",
+	lightBracket2 = "#3a6860",
+	lightBracket3 = "#d07030",
+	lightBracket4 = "#a85068",
+	lightBracket5 = "#4a7bb8",
+	lightBracket6 = "#6a5588",
+	lightBracketError = "#d82828",
+
+	-- Light special
+	lightSpecial = "#3d6fb8",
 }
 
 local M = {}
 
----@param opts? { colors?: table }
+---@param opts? { colors?: table, theme?: string }
 ---@return { theme: ThemeColors, palette: PaletteColors}
 function M.setup(opts)
 	opts = opts or {}
 	local nightingale = require("nightingale")
 	local override_colors = opts.colors or nightingale.config.colors
+	local theme = opts.theme or nightingale._CURRENT_THEME or "nightingale"
 
 	-- Add to and/or override palette_colors
 	local updated_palette_colors = vim.tbl_extend("force", palette, override_colors.palette or {})
 
 	-- Generate the theme according to the updated palette colors
-	local theme_colors = require("nightingale.themes").nightingale(updated_palette_colors)
+	local themes = require("nightingale.themes")
+	local theme_fn = themes[theme]
+	if not theme_fn then
+		vim.notify(
+			string.format("Nightingale: Theme '%s' not found, falling back to 'nightingale'", theme),
+			vim.log.levels.WARN
+		)
+		theme_fn = themes.nightingale
+	end
+	local theme_colors = theme_fn(updated_palette_colors)
 
 	-- Add to and/or override theme_colors
-	local theme_overrides = override_colors.theme.nightingale or {}
+	local theme_overrides = override_colors.theme[theme] or {}
 	local updated_theme_colors = vim.tbl_deep_extend("force", theme_colors, theme_overrides)
 
 	return {

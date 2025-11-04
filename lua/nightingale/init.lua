@@ -19,11 +19,12 @@ M.config = {
 	transparent = false,
 	dimInactive = false,
 	terminalColors = true,
-	colors = { theme = { nightingale = {} }, palette = {} },
+	colors = { theme = { nightingale = {}, lightingale = {} }, palette = {} },
 	---@type fun(colors: NightingaleColorsSpec): table<string, table>
 	overrides = function()
 		return {}
 	end,
+	theme = "nightingale", -- default theme variant
 	compile = false,
 }
 
@@ -43,35 +44,45 @@ function M.setup(config)
 	end
 end
 
-function M.load()
+---@param theme? string
+function M.load(theme)
+	-- Determine which theme to use
+	-- Priority: explicit param > config.theme > default
+	theme = theme or M.config.theme or "nightingale"
+	M._CURRENT_THEME = theme
+
 	package.loaded["nightingale"] = M
 
 	if vim.g.colors_name then
 		vim.cmd("hi clear")
 	end
 
-	vim.g.colors_name = "nightingale"
+	-- Set colors_name based on the theme
+	vim.g.colors_name = theme == "lightingale" and "lightingale" or "nightingale"
 	vim.o.termguicolors = true
 
 	if M.config.compile then
 		local utils = require("nightingale.utils")
-		if utils.load_compiled() then
+		if utils.load_compiled(theme) then
 			return
 		end
 
 		M.compile()
-		utils.load_compiled()
+		utils.load_compiled(theme)
 	else
-		local colors = require("nightingale.colors").setup({ colors = M.config.colors })
+		local colors = require("nightingale.colors").setup({ colors = M.config.colors, theme = theme })
 		local highlights = require("nightingale.highlights").setup(colors, M.config)
 		require("nightingale.highlights").highlight(highlights, M.config.terminalColors and colors.theme.term or {})
 	end
 end
 
 function M.compile()
-	local colors = require("nightingale.colors").setup({ colors = M.config.colors })
-	local highlights = require("nightingale.highlights").setup(colors, M.config)
-	require("nightingale.utils").compile(highlights, M.config.terminalColors and colors.theme.term or {})
+	-- Compile both theme variants
+	for _, theme in ipairs({ "nightingale", "lightingale" }) do
+		local colors = require("nightingale.colors").setup({ colors = M.config.colors, theme = theme })
+		local highlights = require("nightingale.highlights").setup(colors, M.config)
+		require("nightingale.utils").compile(theme, highlights, M.config.terminalColors and colors.theme.term or {})
+	end
 end
 
 vim.api.nvim_create_user_command("NightingaleCompile", function()
