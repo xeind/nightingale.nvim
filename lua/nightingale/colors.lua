@@ -144,26 +144,26 @@ local palette = {
 	special = "#569cd6",
 
 	-- Light theme colors (lightingale variant)
-	-- Backgrounds (inverted - light shades) - Brighter for better contrast
-	lightBg0 = "#ffffff", -- main editor background (pure white for max contrast)
-	lightBg1 = "#f5f5f5", -- tab background
-	lightBg2 = "#ebebeb", -- status bar
-	lightBg3 = "#e6e6e6", -- widgets
-	lightBg4 = "#f0f0f0", -- line highlight (subtle)
-	lightBg5 = "#d8d8d8", -- title bar
-	lightBg6 = "#ffffff", -- terminal background (pure white)
-	lightBg7 = "#f8f8f8", -- widget background
+	-- Backgrounds (inverted from dark theme)
+	lightBg0 = "#dfdfdf", -- main editor background (inverted from #202020)
+	lightBg1 = "#e7e7e7", -- tab background (inverted from #181818)
+	lightBg2 = "#d7d7d7", -- status bar (inverted from #282828)
+	lightBg3 = "#d1d1d1", -- widgets (inverted from #2e2e2e)
+	lightBg4 = "#c9c9c9", -- line highlight (inverted from #363636)
+	lightBg5 = "#bebebe", -- title bar (inverted from #414141)
+	lightBg6 = "#e5e5e5", -- terminal background (inverted from #1a1a1a)
+	lightBg7 = "#e3e3e3", -- widget background (inverted from #1c1c1c)
 
-	-- Light UI backgrounds
-	lightActivityBarBg = "#f0f0f0",
-	lightSideBarBg = "#fafafa",
-	lightListActiveBg = "#e8e8e8",
-	lightInputBg = "#ffffff",
+	-- Light UI backgrounds (inverted from dark theme)
+	lightActivityBarBg = "#d3d3d3", -- inverted from #2c2c2c
+	lightSideBarBg = "#dfdfdf", -- inverted from #202020 (same as bg0)
+	lightListActiveBg = "#cccccc", -- inverted from #333333
+	lightInputBg = "#d5d5d5", -- inverted from #2a2a2a
 
-	-- Light borders
-	lightBorder0 = "#e0e0e0",
-	lightBorder1 = "#c8c8c8",
-	lightBorder2 = "#b0b0b0",
+	-- Light borders (inverted from dark theme)
+	lightBorder0 = "#e4e4e4", -- inverted from #1b1b1b
+	lightBorder1 = "#eaeaea", -- inverted from #151515
+	lightBorder2 = "#a7a7a7", -- inverted from #585858
 
 	-- Light foregrounds - Darker for better contrast
 	lightFg = "#0a0a0a", -- main foreground (very dark)
