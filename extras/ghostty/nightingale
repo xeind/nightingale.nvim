@@ -18,5 +18,5 @@ palette = 15=#ffffff
 background = 202020
 foreground = ffffff
 cursor-color = ffffff
-selection-background = 323232
+selection-background = 444444
 selection-foreground = ffffff
