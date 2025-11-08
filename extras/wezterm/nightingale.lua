@@ -9,7 +9,7 @@ return {
 		cursor_border = "#ffffff",
 
 		selection_fg = "#ffffff",
-		selection_bg = "#323232",
+		selection_bg = "#444444",
 
 		scrollbar_thumb = "#181818",
 		split = "#181818",

@@ -4,7 +4,7 @@ local palette = {
 	bg0 = "#202020", -- editor.background
 	bg1 = "#181818", -- editorGroupHeader.tabsBackground
 	bg2 = "#282828", -- statusBar.background
-	bg3 = "#2e2e2e", -- editorWidget.background / tab.inactiveBackground
+	bg3 = "#2a2a2a", -- editorWidget.background / tab.inactiveBackground
 	bg4 = "#363636", -- editor.lineHighlightBackground
 	bg5 = "#414141", -- titleBar.activeBackground
 	bg6 = "#1a1a1a", -- terminal.background
@@ -43,7 +43,7 @@ local palette = {
 	indentGuideActive = "#525252",
 
 	-- Selection and search
-	selection = "#323232", -- editor.selectionBackground
+	selection = "#444444", -- editor.selectionBackground
 	selectionHighlight = "#373737",
 	wordHighlight = "#6363634d",
 	wordHighlightBorder = "#5a5a5a",
@@ -148,7 +148,7 @@ local palette = {
 	lightBg0 = "#dfdfdf", -- main editor background (inverted from #202020)
 	lightBg1 = "#e7e7e7", -- tab background (inverted from #181818)
 	lightBg2 = "#d7d7d7", -- status bar (inverted from #282828)
-	lightBg3 = "#d1d1d1", -- widgets (inverted from #2e2e2e)
+	lightBg3 = "#d1d1d1", -- widgets (inverted from #2a2a2a)
 	lightBg4 = "#c9c9c9", -- line highlight (inverted from #363636)
 	lightBg5 = "#bebebe", -- title bar (inverted from #414141)
 	lightBg6 = "#e5e5e5", -- terminal background (inverted from #1a1a1a)
