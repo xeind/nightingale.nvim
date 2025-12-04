@@ -36,11 +36,11 @@ keyword = { fg = "#957fb8", modifiers = ["italic"] }
 "keyword.function" = { fg = "#957fb8" }
 "keyword.operator" = { fg = "#957fb8" }
 label = { fg = "#7e9cd8" }
-"markup.bold" = { fg = "#E6C384", modifiers = ["bold"] }
+"markup.bold" = { fg = "#C4B28A", modifiers = ["bold"] }
 "markup.heading" = { fg = "#7e9cd8", modifiers = ["bold"] }
-"markup.heading.completion" = { bg = "#181818", fg = "#E6C384" }
+"markup.heading.completion" = { bg = "#181818", fg = "#C4B28A" }
 "markup.heading.hover" = { bg = "#2a2a2a" }
-"markup.italic" = { fg = "#E6C384", modifiers = ["italic"] }
+"markup.italic" = { fg = "#C4B28A", modifiers = ["italic"] }
 "markup.link" = { fg = "#6a9589" }
 "markup.link.label" = { fg = "#6a9589" }
 "markup.link.text" = { fg = "#6a9589" }
@@ -64,11 +64,11 @@ type = { fg = "#6a9589" }
 "type.enum.variant" = { fg = "#FF9E3B" }
 "ui.background" = { bg = "bg" }
 "ui.bufferline.active" = { bg = "bg_visual", fg = "fg" }
-"ui.cursor" = { bg = "#C8C093", fg = "#202020" }
+"ui.cursor" = { bg = "#C8C093", fg = "#181616" }
 "ui.cursor.match" = { fg = "#FF9E3B", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#585858" }
 "ui.linenr.select" = { fg = "#FF9E3B", modifiers = ["bold"] }
-"ui.menu" = { bg = "#181818", fg = "#E6C384" }
+"ui.menu" = { bg = "#181818", fg = "#C4B28A" }
 "ui.menu.scroll" = { bg = "#2a2a2a", fg = "#585858" }
 "ui.menu.selected" = { bg = "#2a2a2a" }
 "ui.popup" = { bg = "#181818", fg = "#6a9589" }
@@ -76,10 +76,10 @@ type = { fg = "#6a9589" }
 "ui.statusline" = { bg = "#181818", fg = "#DCD7BA" }
 "ui.statusline.inactive" = { bg = "#181818", fg = "#585858" }
 "ui.statusline.normal" = { bg = "blue", fg = "black" }
-"ui.text" = { bg = "#202020", fg = "#E6C384" }
+"ui.text" = { bg = "#181616", fg = "#C4B28A" }
 "ui.text.focus" = { bg = "#2a2a2a" }
 "ui.text.inactive" = { fg = "#585858" }
-"ui.text.info" = { bg = "#181818", fg = "#E6C384" }
+"ui.text.info" = { bg = "#181818", fg = "#C4B28A" }
 "ui.virtual.inlay-hint" = { bg = "#1a1a1a", fg = "#6a9589" }
 "ui.window" = { fg = "#181818", modifiers = ["bold"] }
 variable = { fg = "#e8e4ca" }
@@ -89,7 +89,7 @@ variable = { fg = "#e8e4ca" }
 warning = { fg = "#FF9E3B" }
 
 [palette]
-bg = "#202020"
+bg = "#181616"
 bg_dark = "#181818"
 bg_dark1 = "#1a1a1a"
 bg_float = "#181818"
@@ -110,9 +110,9 @@ dark5 = "#808080"
 "diff.delete" = "#43242B"
 "diff.text" = "#363636"
 error = "#ee5d43"
-fg = "#E6C384"
+fg = "#C4B28A"
 fg_dark = "#DCD7BA"
-fg_float = "#E6C384"
+fg_float = "#C4B28A"
 fg_gutter = "#585858"
 fg_sidebar = "#DCD7BA"
 "git.add" = "#98bb6c"
@@ -135,7 +135,7 @@ rainbow = "#7e9cd8"
 "rainbow.8" = "#ee5d43"
 red = "#ee5d43"
 teal = "#6a9589"
-"terminal.black" = "#202020"
+"terminal.black" = "#181616"
 "terminal.black_bright" = "#727169"
 "terminal.blue" = "#7e9cd8"
 "terminal.blue_bright" = "#7e9cd8"

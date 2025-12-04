@@ -1,5 +1,5 @@
 # Nightingale Color Palette
-set -l foreground E6C384
+set -l foreground C4B28A
 set -l selection 444444
 set -l comment 727169
 set -l red ee5d43

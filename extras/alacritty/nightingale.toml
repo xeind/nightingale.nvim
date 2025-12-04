@@ -1,11 +1,11 @@
 # Nightingale Alacritty Colors
 
 [colors.primary]
-background = '#202020'
-foreground = '#E6C384'
+background = '#181616'
+foreground = '#C4B28A'
 
 [colors.normal]
-black = '#202020'
+black = '#181616'
 red = '#e14c4c'
 green = '#89c471'
 yellow = '#ffd13b'
@@ -26,16 +26,8 @@ white = '#ffffff'
 
 [colors.selection]
 background = '#444444'
-foreground = '#E6C384'
-
-[[colors.indexed_colors]]
-index = 16
-color = '#ffa066'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#f5a284'
+foreground = '#C4B28A'
 
 [colors.cursor]
 cursor = '#C8C093'
-text = '#202020'
+text = '#181616'

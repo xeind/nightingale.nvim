@@ -1,7 +1,7 @@
 [
     {
-        "background": "#202020",
-        "black": "#202020",
+        "background": "#181616",
+        "black": "#181616",
         "blue": "#5690ac",
         "brightBlack": "#727169",
         "brightBlue": "#81c0da",
@@ -13,7 +13,7 @@
         "brightYellow": "#E6C384",
         "cursorColor": "#C8C093",
         "cyan": "#9CABCA",
-        "foreground": "#E6C384",
+        "foreground": "#C4B28A",
         "green": "#89c471",
         "name": "Nightingale",
         "purple": "#957fb8",

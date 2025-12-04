@@ -1,4 +1,4 @@
-palette = 0=#202020
+palette = 0=#181616
 palette = 1=#e14c4c
 palette = 2=#89c471
 palette = 3=#ffd13b
@@ -15,8 +15,8 @@ palette = 13=#D27E99
 palette = 14=#A3D4D5
 palette = 15=#ffffff
 
-background = 202020
-foreground = E6C384
+background = 181616
+foreground = C4B28A
 cursor-color = C8C093
 selection-background = 444444
-selection-foreground = E6C384
+selection-foreground = C4B28A
