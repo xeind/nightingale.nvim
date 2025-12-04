@@ -4,38 +4,42 @@
 
 A Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions. Available in both dark and light variants.
 
-## Variants
+## ✨ Features
+
+- 🎨 **Two Variants:** Dark (Nightingale) and Light (Lightingale)
+- 🌳 **Enhanced TreeSitter:** Full semantic highlighting with JSX/TSX support
+- 🔍 **LSP Semantic Tokens:** 26+ semantic token types and modifiers
+- 🔌 **27+ Plugin Integrations:** nvim-cmp, telescope, mini.nvim suite, bufferline, trouble, alpha, illuminate, and more
+- 🖥️ **16 Terminal/Editor Themes:** Alacritty, Kitty, iTerm2, Helix, Fish, Lazygit, and more
+- ⚡ **Performance:** Optimized for fast startup times
+- 🎯 **Consistency:** Single color palette source across all integrations
+
+## 🎨 Variants
 
 ### Nightingale (Dark)
 
 The theme uses a carefully selected palette of warm, comfortable colors designed for long coding sessions:
 
-- Background: Deep warm dark tones (`#202020`)
-- Foreground: Soft cream/beige
-- Syntax: Greens, blues, purples, and warm accent colors
-- UI: Subtle grays and warm borders
+- **Background:** Deep warm dark tones (`#202020`)
+- **Foreground:** Soft cream/beige (`#ffffff` / `#DCD7BA`)
+- **Syntax:** Greens (`#98BB6C`), Blues (`#85a8da`), Purples (`#a584c0`), and warm accents
+- **UI:** Subtle grays and warm borders
 
 ### Lightingale (Light)
 
 A light variant with inverted colors from the dark theme, maintaining the same visual harmony:
 
-- Background: Soft light gray (`#dfdfdf`)
-- Foreground: Very dark gray for excellent contrast
-- Syntax: Darkened, saturated colors optimized for light backgrounds
-- UI: Clean, comfortable interface perfect for bright environments
+- **Background:** Soft light gray (`#dfdfdf`)
+- **Foreground:** Very dark gray for excellent contrast
+- **Syntax:** Darkened, saturated colors optimized for light backgrounds
+- **UI:** Clean, comfortable interface perfect for bright environments
 
-## Features
-
-- TreeSitter support
-- LSP semantic highlighting
-- Terminal colors support
-
-## Requirements
+## 📦 Requirements
 
 - Neovim >= 0.8.0
 - `termguicolors` enabled
 
-## Installation
+## 📥 Installation
 
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -46,7 +50,7 @@ A light variant with inverted colors from the dark theme, maintaining the same v
     priority = 1000,
     config = function()
         require("nightingale").setup({
-            transparent = true,
+            transparent = false, -- set to true for transparent background
         })
         vim.cmd("colorscheme nightingale")
     end,
@@ -59,9 +63,7 @@ A light variant with inverted colors from the dark theme, maintaining the same v
 use {
     "xeind/nightingale.nvim",
     config = function()
-        require("nightingale").setup({
-            transparent = true,
-        })
+        require("nightingale").setup()
         vim.cmd("colorscheme nightingale")
     end
 }
@@ -76,49 +78,46 @@ Plug 'xeind/nightingale.nvim'
 Then in your config:
 
 ```lua
-require("nightingale").setup({
-    transparent = true,
-})
+require("nightingale").setup()
 vim.cmd("colorscheme nightingale")
 ```
 
-## Usage
+## 🚀 Usage
 
-### Dark Theme (Nightingale)
-
-```vim
-colorscheme nightingale
-```
+### Basic Usage
 
 ```lua
+-- Dark theme
 vim.cmd("colorscheme nightingale")
-```
 
-### Light Theme (Lightingale)
-
-```vim
-colorscheme lightingale
-```
-
-```lua
+-- Light theme
 vim.cmd("colorscheme lightingale")
 ```
 
-### Switching via Lua Setup
+### Quick Toggle Between Variants
 
 ```lua
-require("nightingale").setup({
-    theme = "lightingale",  -- or "nightingale" for dark
-})
-vim.cmd("colorscheme lightingale")
+-- Switch to dark theme
+require('nightingale').load('nightingale')
+
+-- Switch to light theme
+require('nightingale').load('lightingale')
+
+-- Keybindings example
+vim.keymap.set('n', '<leader>td', function()
+    require('nightingale').load('nightingale')
+end, { desc = 'Dark theme' })
+
+vim.keymap.set('n', '<leader>tl', function()
+    require('nightingale').load('lightingale')
+end, { desc = 'Light theme' })
 ```
 
-## Configuration
+## ⚙️ Configuration
 
-There is no need to call setup if you are okay with the defaults.
+Default configuration (no need to call setup if you're okay with defaults):
 
 ```lua
--- Default options:
 require('nightingale').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
@@ -144,71 +143,109 @@ require('nightingale').setup({
     end,
 })
 
--- setup must be called before loading
 vim.cmd("colorscheme nightingale")
 ```
 
-### Style Customization Examples
+### Customization Examples
 
 ```lua
 require('nightingale').setup({
-    -- Use light theme variant
-    theme = "lightingale",
-
     -- Enable transparent background
     transparent = true,
 
-    -- Enable italic numbers
+    -- Customize styles
+    commentStyle = { italic = true },
+    functionStyle = { italic = true },
+    keywordStyle = { italic = true, bold = true },
     numberStyle = { italic = true },
-
-    -- Disable all styling
-    commentStyle = {},
-    functionStyle = {},
-    keywordStyle = {},
 
     -- Dim inactive windows
     dimInactive = true,
 
-    -- Custom color overrides
+    -- Custom highlight overrides
     overrides = function(colors)
         local theme = colors.theme
         return {
-            -- Make line numbers stand out more
             LineNr = { fg = theme.ui.fg_dim, bold = true },
-            -- Custom diagnostic colors
-            DiagnosticError = { fg = "#ff0000" },
+            CursorLineNr = { fg = theme.diag.warning, bold = true },
+            TelescopeBorder = { fg = theme.ui.float.fg_border },
         }
     end,
 })
 ```
 
-### Toggle Between Light and Dark
+# All extras use the same color palette for perfect consistency across your entire development environment.
+
+📖 **[View detailed installation guide →](./EXTRAS.md)**
+
+## 🎨 Color Palette
+
+### Core Colors
 
 ```lua
--- Switch to dark theme
-require('nightingale').load('nightingale')
+-- Syntax
+green   = "#98BB6C"  -- Strings, success
+blue    = "#85a8da"  -- Functions, primary
+cyan    = "#7cd0bf"  -- Types, constants
+purple  = "#a584c0"  -- Keywords, control flow
+orange  = "#f5a284"  -- Constants, numbers
+red     = "#ee5d43"  -- Errors, warnings
+yellow  = "#E6C384"  -- Identifiers, parameters
 
--- Switch to light theme
-require('nightingale').load('lightingale')
+-- UI
+fg      = "#ffffff"  -- Main foreground
+fg2     = "#DCD7BA"  -- Secondary foreground
+bg      = "#202020"  -- Main background
+gray    = "#727169"  -- Comments, disabled text
 ```
 
-You can bind these to keymaps for easy theme switching:
+### Semantic Mappings
 
-```lua
-vim.keymap.set('n', '<leader>td', function()
-    require('nightingale').load('nightingale')
-end, { desc = 'Dark theme' })
+- **Strings/Success:** Green (`#98BB6C`)
+- **Functions:** Blue (`#85a8da`)
+- **Types:** Cyan (`#7cd0bf`)
+- **Keywords:** Purple (`#a584c0`)
+- **Constants:** Orange (`#f5a284`)
+- **Errors:** Red (`#ee5d43`)
+- **Parameters:** Yellow (`#E6C384`)
+- **Comments:** Gray (`#727169`)
 
-vim.keymap.set('n', '<leader>tl', function()
-    require('nightingale').load('lightingale')
-end, { desc = 'Light theme' })
-```
+## 🆚 Comparison with Other Themes
 
-## Acknowledgments
+| Feature               | Nightingale       | TokyoNight    | Kanagawa             |
+| --------------------- | ----------------- | ------------- | -------------------- |
+| **Variants**          | 2 (Dark/Light)    | 4 variants    | 3 variants           |
+| **Plugin Highlights** | 540+ groups       | 600+ groups   | 400+ groups          |
+| **Supported Plugins** | 27+ plugins       | 58 plugins    | 20+ plugins          |
+| **Terminal Themes**   | 16 extras         | 46 extras     | 21 extras            |
+| **LSP Tokens**        | 26+ tokens        | Full coverage | 20+ tokens           |
+| **Color Philosophy**  | Warm, comfortable | Cool, vibrant | Traditional Japanese |
+| **Architecture**      | Monolithic        | Modular       | Monolithic           |
+
+**Nightingale's Strength:** Quality over quantity - comprehensive support for the most popular plugins with excellent color consistency.
+
+## 🛣️ Roadmap
+
+### Current Focus
+
+- ✅ Enhanced LSP semantic tokens
+- ✅ Full JSX/TSX support
+- ✅ 16 terminal/editor themes
+- ✅ 27+ plugin integrations
+- ✅ Documentation improvements
+
+### Planned Features
+
+- 🔍 lspsaga support (enhanced LSP UI)
+- 🎨 More terminal themes (gitui, btop, delta)
+- 🤖 Automated extra generation system (future)
+
+## 🙏 Acknowledgments
 
 - Original [Nightingale VS Code Theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme) by bfrangi
 - Theme structure inspired by [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
+- Plugin integration patterns from [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 
-## License
+## 📄 License
 
 MIT

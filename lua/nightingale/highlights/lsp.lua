@@ -27,14 +27,27 @@ function M.setup(theme, config)
 		["@lsp.type.variable"] = { fg = "none" },
 		["@lsp.type.comment"] = { link = "Comment" },
 
-		-- Additional LSP types
-		["@lsp.type.const"] = { link = "@constant" },
-		["@lsp.type.comparison"] = { link = "@operator" },
-		["@lsp.type.bitwise"] = { link = "@operator" },
-		["@lsp.type.punctuation"] = { link = "Delimiter" },
-		["@lsp.type.selfParameter"] = { link = "@variable.builtin" },
-		["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
-		["@lsp.type.magicFunction"] = { link = "@function.builtin" },
+	-- Additional LSP types
+	["@lsp.type.boolean"] = { link = "@boolean" },
+	["@lsp.type.builtinType"] = { link = "@type.builtin" },
+	["@lsp.type.const"] = { link = "@constant" },
+	["@lsp.type.comparison"] = { link = "@operator" },
+	["@lsp.type.bitwise"] = { link = "@operator" },
+	["@lsp.type.punctuation"] = { link = "Delimiter" },
+	["@lsp.type.selfParameter"] = { link = "@variable.builtin" },
+	["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
+	["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
+	["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
+	["@lsp.type.magicFunction"] = { link = "@function.builtin" },
+	["@lsp.type.deriveHelper"] = { link = "@attribute" },
+	["@lsp.type.escapeSequence"] = { link = "@string.escape" },
+	["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
+	["@lsp.type.generic"] = { link = "@variable" },
+	["@lsp.type.typeAlias"] = { link = "@type.definition" },
+	["@lsp.type.unresolvedReference"] = { undercurl = true, sp = theme.diag.error },
+	["@lsp.type.operator"] = { link = "@operator" },
+	["@lsp.type.number"] = { link = "@number" },
+	["@lsp.type.keyword"] = { link = "@keyword" },
 
 		-- LSP modifiers
 		["@lsp.mod.deprecated"] = { fg = theme.syn.deprecated, strikethrough = true },
@@ -45,25 +58,38 @@ function M.setup(theme, config)
 		["@lsp.mod.documentation"] = { fg = theme.syn.comment },
 		["@lsp.mod.typeHint"] = { link = "@type" },
 
-		-- LSP type+modifier combinations (typemods)
-		["@lsp.typemod.class.static"] = { fg = theme.syn.type, italic = true },
-		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
-		["@lsp.typemod.function.builtin"] = { link = "@function.builtin" },
-		["@lsp.typemod.function.static"] = { fg = theme.syn.fun, italic = true },
-		["@lsp.typemod.function.readonly"] = { fg = theme.syn.fun, bold = true },
-		["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
-		["@lsp.typemod.method.static"] = { fg = theme.syn.method, italic = true },
-		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
-		["@lsp.typemod.variable.global"] = { link = "@constant" },
-		["@lsp.typemod.variable.static"] = { link = "@constant" },
-		["@lsp.typemod.variable.readonly"] = { fg = theme.syn.constant },
-		["@lsp.typemod.variable.injected"] = { link = "@variable" },
+	-- LSP type+modifier combinations (typemods)
+	["@lsp.typemod.class.static"] = { fg = theme.syn.type, italic = true },
+	["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
+	["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
+	["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
+	["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+	["@lsp.typemod.function.builtin"] = { link = "@function.builtin" },
+	["@lsp.typemod.function.static"] = { fg = theme.syn.fun, italic = true },
+	["@lsp.typemod.function.readonly"] = { fg = theme.syn.fun, bold = true },
+	["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
+	["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
+	["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+	["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+	["@lsp.typemod.method.static"] = { fg = theme.syn.method, italic = true },
+	["@lsp.typemod.operator.injected"] = { link = "@operator" },
+	["@lsp.typemod.string.injected"] = { link = "@string" },
+	["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
+	["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+	["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
+	["@lsp.typemod.variable.callable"] = { link = "@function" },
+	["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+	["@lsp.typemod.variable.global"] = { link = "@constant" },
+	["@lsp.typemod.variable.static"] = { link = "@constant" },
+	["@lsp.typemod.variable.readonly"] = { fg = theme.syn.constant },
+	["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
-		-- Language-specific LSP tokens
-		["@lsp.typemod.operator.controlFlow"] = { link = "@keyword.exception" }, -- Rust ? operator
-		["@lsp.type.lifetime"] = { link = "@operator" }, -- Rust lifetimes
-		["@lsp.typemod.keyword.documentation"] = { link = "Special" },
-		["@lsp.type.decorator.rust"] = { link = "PreProc" },
+	-- Language-specific LSP tokens
+	["@lsp.typemod.operator.controlFlow"] = { link = "@keyword.exception" }, -- Rust ? operator
+	["@lsp.type.lifetime"] = { link = "@operator" }, -- Rust lifetimes
+	["@lsp.typemod.keyword.documentation"] = { link = "Special" },
+	["@lsp.type.decorator.rust"] = { link = "PreProc" },
+	["@lsp.type.namespace.python"] = { link = "@variable" }, -- Python modules
 
 		-- VS Code semantic token mappings (from Nightingale theme)
 		["@lsp.type.stringLiteral"] = { link = "@string" },

@@ -1,0 +1,9 @@
+; Highlight destructured React useState setter identifiers as functions
+
+;; Match array pattern in variable declarator: const [value, setter] = useState(...)
+((variable_declarator
+  (array_pattern
+    (identifier) @variable
+    (identifier) @function.setter (#match? @function.setter "^[sS]et[A-Z].*")
+  )
+))

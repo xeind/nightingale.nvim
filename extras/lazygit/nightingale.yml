@@ -1,0 +1,51 @@
+# Nightingale theme for lazygit
+# Place this in your lazygit config at ~/.config/lazygit/config.yml
+# or set LAZYGIT_CONFIG_FILE to point to this file
+
+gui:
+  theme:
+    # Selected line background
+    selectedLineBgColor:
+      - "#363636" # bg_highlight
+    
+    # Active searching border
+    searchingActiveBorderColor:
+      - "#98BB6C" # green
+      - "bold"
+    
+    # Options/menu text
+    optionsTextColor:
+      - "#7cd0bf" # cyan
+    
+    # Inactive border
+    inactiveBorderColor:
+      - "#585858" # gray2 / border2
+    
+    # Default foreground
+    defaultFgColor:
+      - "#DCD7BA" # fg2
+    
+    # Cherry picked commit colors
+    cherryPickedCommitFgColor:
+      - "#85a8da" # blue (function color)
+    cherryPickedCommitBgColor:
+      - "#2a2a2a" # bg3
+    
+    # Active border
+    activeBorderColor:
+      - "#98BB6C" # green
+      - "bold"
+    
+    # Unstaged changes
+    unstagedChangesColor:
+      - "#ee5d43" # red (error color)
+    
+    # Untracked files
+    untrackChangesColor:
+      - "#ee5d43" # red
+    
+    # Staged changes
+    markedBaseCommitFgColor:
+      - "#85a8da" # blue
+    markedBaseCommitBgColor:
+      - "#2a2a2a" # bg3

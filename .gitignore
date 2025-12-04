@@ -1,0 +1,14 @@
+# Reference themes (not needed in repo)
+# nvim-reference/
+
+# VSCode theme folder
+# vscode-theme/
+
+# macOS
+.DS_Store
+
+# Backup files
+*.backup
+
+# Compiled files
+lua/nightingale/compiled.lua

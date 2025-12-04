@@ -589,6 +589,39 @@ function M.setup(theme, config)
 	highlights.NoiceSplitBorder = { link = "FloatBorder" }
 	highlights.NoiceVirtualText = { fg = theme.syn.comment }
 
+	highlights.RenderMarkdownBullet = { fg = theme.syn.constant }
+	highlights.RenderMarkdownCode = { bg = theme.ui.bg_dim }
+	highlights.RenderMarkdownDash = { fg = theme.syn.constant }
+	highlights.RenderMarkdownTableHead = { fg = theme.syn.special3 }
+	highlights.RenderMarkdownTableRow = { fg = theme.syn.constant }
+	highlights.RenderMarkdownCodeInline = { link = "@markup.raw.markdown_inline" }
+	highlights.RenderMarkdownH1Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH1Fg = { fg = theme.syn.fun, bold = true }
+	highlights.RenderMarkdownH2Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH2Fg = { fg = theme.syn.constant, bold = true }
+	highlights.RenderMarkdownH3Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH3Fg = { fg = theme.syn.string, bold = true }
+	highlights.RenderMarkdownH4Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH4Fg = { fg = theme.syn.type, bold = true }
+	highlights.RenderMarkdownH5Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH5Fg = { fg = theme.syn.keyword, bold = true }
+	highlights.RenderMarkdownH6Bg = { bg = theme.ui.bg_p1 }
+	highlights.RenderMarkdownH6Fg = { fg = theme.syn.keyword, bold = true }
+
+	-- alpha.nvim (startup screen)
+	highlights.AlphaShortcut = { fg = theme.syn.constant }
+	highlights.AlphaHeader = { fg = theme.syn.fun }
+	highlights.AlphaHeaderLabel = { fg = theme.syn.constant }
+	highlights.AlphaFooter = { fg = theme.syn.special1 }
+	highlights.AlphaButtons = { fg = theme.syn.identifier }
+
+	-- vim-illuminate (document highlighting)
+	highlights.IlluminatedWordRead = { bg = theme.ui.bg_p2 }
+	highlights.IlluminatedWordText = { bg = theme.ui.bg_p2 }
+	highlights.IlluminatedWordWrite = { bg = theme.ui.bg_p2 }
+	highlights.illuminatedCurWord = { bg = theme.ui.bg_p2 }
+	highlights.illuminatedWord = { bg = theme.ui.bg_p2 }
+
 	return highlights
 end
 
