@@ -36,11 +36,11 @@ keyword = { fg = "#957fb8", modifiers = ["italic"] }
 "keyword.function" = { fg = "#957fb8" }
 "keyword.operator" = { fg = "#957fb8" }
 label = { fg = "#7e9cd8" }
-"markup.bold" = { fg = "#ffffff", modifiers = ["bold"] }
+"markup.bold" = { fg = "#E6C384", modifiers = ["bold"] }
 "markup.heading" = { fg = "#7e9cd8", modifiers = ["bold"] }
-"markup.heading.completion" = { bg = "#181818", fg = "#ffffff" }
+"markup.heading.completion" = { bg = "#181818", fg = "#E6C384" }
 "markup.heading.hover" = { bg = "#2a2a2a" }
-"markup.italic" = { fg = "#ffffff", modifiers = ["italic"] }
+"markup.italic" = { fg = "#E6C384", modifiers = ["italic"] }
 "markup.link" = { fg = "#6a9589" }
 "markup.link.label" = { fg = "#6a9589" }
 "markup.link.text" = { fg = "#6a9589" }
@@ -64,11 +64,11 @@ type = { fg = "#6a9589" }
 "type.enum.variant" = { fg = "#FF9E3B" }
 "ui.background" = { bg = "bg" }
 "ui.bufferline.active" = { bg = "bg_visual", fg = "fg" }
-"ui.cursor" = { bg = "#ffffff", fg = "#202020" }
+"ui.cursor" = { bg = "#C8C093", fg = "#202020" }
 "ui.cursor.match" = { fg = "#FF9E3B", modifiers = ["bold"] }
 "ui.linenr" = { fg = "#585858" }
 "ui.linenr.select" = { fg = "#FF9E3B", modifiers = ["bold"] }
-"ui.menu" = { bg = "#181818", fg = "#ffffff" }
+"ui.menu" = { bg = "#181818", fg = "#E6C384" }
 "ui.menu.scroll" = { bg = "#2a2a2a", fg = "#585858" }
 "ui.menu.selected" = { bg = "#2a2a2a" }
 "ui.popup" = { bg = "#181818", fg = "#6a9589" }
@@ -76,10 +76,10 @@ type = { fg = "#6a9589" }
 "ui.statusline" = { bg = "#181818", fg = "#DCD7BA" }
 "ui.statusline.inactive" = { bg = "#181818", fg = "#585858" }
 "ui.statusline.normal" = { bg = "blue", fg = "black" }
-"ui.text" = { bg = "#202020", fg = "#ffffff" }
+"ui.text" = { bg = "#202020", fg = "#E6C384" }
 "ui.text.focus" = { bg = "#2a2a2a" }
-"ui.text.inactive" = { fg = "#727169", modifiers = ["italic"] }
-"ui.text.info" = { bg = "#181818", fg = "#ffffff" }
+"ui.text.inactive" = { fg = "#585858" }
+"ui.text.info" = { bg = "#181818", fg = "#E6C384" }
 "ui.virtual.inlay-hint" = { bg = "#1a1a1a", fg = "#6a9589" }
 "ui.window" = { fg = "#181818", modifiers = ["bold"] }
 variable = { fg = "#e8e4ca" }
@@ -110,9 +110,9 @@ dark5 = "#808080"
 "diff.delete" = "#43242B"
 "diff.text" = "#363636"
 error = "#ee5d43"
-fg = "#ffffff"
+fg = "#E6C384"
 fg_dark = "#DCD7BA"
-fg_float = "#ffffff"
+fg_float = "#E6C384"
 fg_gutter = "#585858"
 fg_sidebar = "#DCD7BA"
 "git.add" = "#98bb6c"

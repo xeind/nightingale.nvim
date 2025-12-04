@@ -2,7 +2,7 @@
 
 [colors.primary]
 background = '#202020'
-foreground = '#ffffff'
+foreground = '#E6C384'
 
 [colors.normal]
 black = '#202020'
@@ -26,7 +26,7 @@ white = '#ffffff'
 
 [colors.selection]
 background = '#444444'
-foreground = '#ffffff'
+foreground = '#E6C384'
 
 [[colors.indexed_colors]]
 index = 16
@@ -35,3 +35,7 @@ color = '#ffa066'
 [[colors.indexed_colors]]
 index = 17
 color = '#f5a284'
+
+[colors.cursor]
+cursor = '#C8C093'
+text = '#202020'

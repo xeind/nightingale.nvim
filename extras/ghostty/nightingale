@@ -16,7 +16,7 @@ palette = 14=#A3D4D5
 palette = 15=#ffffff
 
 background = 202020
-foreground = ffffff
-cursor-color = ffffff
+foreground = E6C384
+cursor-color = C8C093
 selection-background = 444444
-selection-foreground = ffffff
+selection-foreground = E6C384

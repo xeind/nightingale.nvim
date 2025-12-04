@@ -1,14 +1,14 @@
 return {
-	force_reverse_video_cursor = true,
+	force_reverse_video_cursor = false,
 	colors = {
-		foreground = "#ffffff",
+		foreground = "#E6C384",
 		background = "#202020",
 
-		cursor_bg = "#ffffff",
-		cursor_fg = "#ffffff",
-		cursor_border = "#ffffff",
+		cursor_bg = "#C8C093",
+		cursor_fg = "#202020",
+		cursor_border = "#C8C093",
 
-		selection_fg = "#ffffff",
+		selection_fg = "#E6C384",
 		selection_bg = "#444444",
 
 		scrollbar_thumb = "#181818",

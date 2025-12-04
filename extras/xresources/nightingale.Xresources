@@ -1,7 +1,8 @@
 ! Nightingale colors for Xresources
 
 *background: #202020
-*foreground: #ffffff
+*foreground: #E6C384
+*cursorColor: #C8C093
 
 *color0: #202020
 *color1: #ee5d43
