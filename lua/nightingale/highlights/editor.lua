@@ -68,7 +68,7 @@ function M.setup(theme, config)
 		Search = { fg = theme.ui.fg, bg = theme.ui.bg_search_highlight }, -- Other matches (lighter for visibility)
 		IncSearch = { fg = theme.ui.bg, bg = theme.diag.warning },
 		SpecialKey = { fg = theme.ui.nontext },
-		SpellBad = { undercurl = true, sp = theme.diag.error },
+		SpellBad = { undercurl = true, sp = theme.syn.comment },
 		SpellCap = { undercurl = true, sp = theme.diag.warning },
 		SpellLocal = { undercurl = true, sp = theme.diag.warning },
 		SpellRare = { undercurl = true, sp = theme.diag.warning },
@@ -89,9 +89,9 @@ function M.setup(theme, config)
 		debugPC = { bg = theme.diff.change },
 		debugBreakpoint = { fg = theme.diag.error, bg = transparent and theme.ui.none or theme.ui.bg },
 
-		LspReferenceText = { bg = theme.ui.bg_p2 },
-		LspReferenceRead = { link = "LspReferenceText" },
-		LspReferenceWrite = { link = "LspReferenceText" },
+		LspReferenceText = { bg = theme.ui.bg_p1 },
+		LspReferenceRead = { bg = theme.ui.bg_p1 },
+		LspReferenceWrite = { bg = theme.ui.bg_p1 },
 
 		DiagnosticError = { fg = theme.diag.error },
 		DiagnosticWarn = { fg = theme.diag.warning },

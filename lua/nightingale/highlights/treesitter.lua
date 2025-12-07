@@ -94,6 +94,7 @@ function M.setup(theme, config)
 
 	["@markup.strong"] = { bold = true },
 	["@markup.italic"] = { italic = true },
+	["@markup.italic.markdown_inline"] = { link = "Italic" },
 	["@markup.strikethrough"] = { strikethrough = true },
 	["@markup.underline"] = { underline = true },
 
@@ -106,23 +107,27 @@ function M.setup(theme, config)
 	["@markup.heading.6"] = { fg = theme.syn.fun, bold = true },
 
 	["@markup.quote"] = { fg = theme.syn.comment, italic = true },
+	["@markup.quote.markdown"] = { link = "Comment" },
 	["@markup.math"] = { fg = theme.syn.special1 },
 
 	["@markup.link"] = { fg = theme.syn.special3 },
 	["@markup.link.label"] = { fg = theme.syn.special1 },
 	["@markup.link.label.symbol"] = { link = "Identifier" },
 	["@markup.link.url"] = { fg = theme.syn.string, underline = true },
+	["@markup.link.url.markdown_inline"] = { link = "Special" },
+	["@markup.link.label.markdown_inline"] = { link = "WarningMsg" },
 
 	["@markup.raw"] = { fg = theme.syn.string },
 	["@markup.raw.block"] = { fg = theme.syn.string },
-	["@markup.raw.markdown_inline"] = { fg = theme.syn.string, bg = theme.ui.bg_p1 },
+	["@markup.raw.markdown_inline"] = { link = "String" },
 	["@markup.environment"] = { fg = theme.syn.preproc },
 	["@markup.environment.name"] = { link = "Type" },
 
 	["@markup.list"] = { fg = theme.syn.special1 },
 	["@markup.list.checked"] = { fg = theme.diag.ok },
+	["@markup.list.checked.markdown"] = { link = "DiagnosticOk" },
 	["@markup.list.unchecked"] = { fg = theme.syn.comment },
-	["@markup.list.markdown"] = { fg = theme.syn.special1, bold = true },
+	["@markup.list.markdown"] = { link = "Function" },
 
 	["@diff.plus"] = { fg = theme.vcs.added },
 	["@diff.minus"] = { fg = theme.vcs.removed },
