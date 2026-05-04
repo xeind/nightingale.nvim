@@ -1,7 +1,7 @@
 ---@class PaletteColors
 local palette = {
 	-- Background shades (from VS Code theme)
-	bg0 = "#202020", -- editor.background
+	bg0 = "#181616", -- editor.background
 	bg1 = "#181818", -- editorGroupHeader.tabsBackground
 	bg2 = "#282828", -- statusBar.background
 	bg3 = "#2a2a2a", -- editorWidget.background / tab.inactiveBackground
