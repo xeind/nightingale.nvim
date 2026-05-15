@@ -101,7 +101,7 @@ return {
 				bg = palette.bg0,
 				bg_p1 = palette.bg3,
 				bg_p2 = palette.bg4,
-				bg_gutter = palette.bg2,
+				bg_gutter = palette.bg1,
 
 				special = palette.gray2,
 				indent_line = palette.indentGuide,
