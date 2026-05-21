@@ -622,6 +622,22 @@ function M.setup(theme, config)
 	highlights.illuminatedCurWord = { bg = theme.ui.bg_p2 }
 	highlights.illuminatedWord = { bg = theme.ui.bg_p2 }
 
+	-- oil.nvim
+	highlights.OilDir = { fg = theme.syn.fun, bold = true }
+	highlights.OilDirIcon = { fg = theme.syn.fun }
+	highlights.OilFile = { fg = theme.ui.fg }
+	highlights.OilHidden = { fg = theme.syn.comment }
+	highlights.OilDirHidden = { fg = theme.syn.comment }
+	highlights.OilLink = { fg = theme.syn.type }
+	highlights.OilLinkTarget = { fg = theme.syn.type, italic = true }
+	highlights.OilCreate = { fg = theme.vcs.added }
+	highlights.OilDelete = { fg = theme.diag.error }
+	highlights.OilMove = { fg = theme.diag.warning }
+	highlights.OilCopy = { fg = theme.diag.info }
+	highlights.OilChange = { fg = theme.diag.warning }
+	highlights.OilTrash = { fg = theme.diag.error, italic = true }
+	highlights.OilVtext = { fg = theme.syn.comment, italic = true }
+
 	return highlights
 end
 
