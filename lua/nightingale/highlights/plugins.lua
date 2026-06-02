@@ -340,6 +340,7 @@ function M.setup(theme, config)
 	highlights.LazyButton = { bg = theme.ui.bg_p1, fg = theme.ui.fg }
 	highlights.LazyButtonActive = { bg = theme.ui.pmenu.bg_sel, fg = theme.ui.fg, bold = true }
 	highlights.LazySpecial = { fg = theme.syn.special1 }
+	highlights.LazyDimmed = { fg = theme.syn.comment }
 
 	highlights.NavicText = { fg = theme.ui.fg }
 	highlights.NavicSeparator = { fg = theme.syn.punct }
