@@ -110,10 +110,10 @@ function M.setup(theme, config)
 		DiagnosticSignInfo = { fg = theme.diag.info, bg = transparent and theme.ui.none or theme.ui.bg },
 		DiagnosticSignHint = { fg = theme.diag.hint, bg = transparent and theme.ui.none or theme.ui.bg },
 
-		DiagnosticVirtualTextError = { fg = theme.diag.error, bg = transparent and theme.ui.none or theme.ui.bg },
-		DiagnosticVirtualTextWarn = { fg = theme.diag.warning, bg = transparent and theme.ui.none or theme.ui.bg },
-		DiagnosticVirtualTextInfo = { fg = theme.diag.info, bg = transparent and theme.ui.none or theme.ui.bg },
-		DiagnosticVirtualTextHint = { fg = theme.diag.hint, bg = transparent and theme.ui.none or theme.ui.bg },
+		DiagnosticVirtualTextError = { fg = theme.diag.error, bg = theme.ui.none },
+		DiagnosticVirtualTextWarn = { fg = theme.diag.warning, bg = theme.ui.none },
+		DiagnosticVirtualTextInfo = { fg = theme.diag.info, bg = theme.ui.none },
+		DiagnosticVirtualTextHint = { fg = theme.diag.hint, bg = theme.ui.none },
 
 		DiagnosticUnderlineError = { undercurl = true, sp = theme.diag.error },
 		DiagnosticUnderlineWarn = { undercurl = true, sp = theme.diag.warning },
