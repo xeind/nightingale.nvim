@@ -19,7 +19,7 @@ M.config = {
 	transparent = false,
 	dimInactive = false,
 	terminalColors = true,
-	colors = { theme = { nightingale = {}, lightingale = {} }, palette = {} },
+	colors = { theme = { nightingale = {} }, palette = {} },
 	---@type fun(colors: NightingaleColorsSpec): table<string, table>
 	overrides = function()
 		return {}
@@ -58,7 +58,7 @@ function M.load(theme)
 	end
 
 	-- Set colors_name based on the theme
-	vim.g.colors_name = theme == "lightingale" and "lightingale" or "nightingale"
+	vim.g.colors_name = "nightingale"
 	vim.o.termguicolors = true
 
 	if M.config.compile then
@@ -77,12 +77,9 @@ function M.load(theme)
 end
 
 function M.compile()
-	-- Compile both theme variants
-	for _, theme in ipairs({ "nightingale", "lightingale" }) do
-		local colors = require("nightingale.colors").setup({ colors = M.config.colors, theme = theme })
-		local highlights = require("nightingale.highlights").setup(colors, M.config)
-		require("nightingale.utils").compile(theme, highlights, M.config.terminalColors and colors.theme.term or {})
-	end
+	local colors = require("nightingale.colors").setup({ colors = M.config.colors, theme = "nightingale" })
+	local highlights = require("nightingale.highlights").setup(colors, M.config)
+	require("nightingale.utils").compile("nightingale", highlights, M.config.terminalColors and colors.theme.term or {})
 end
 
 vim.api.nvim_create_user_command("NightingaleCompile", function()
