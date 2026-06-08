@@ -4,19 +4,19 @@
 
 A Neovim theme ported from the Nightingale VS Code theme, featuring warm tones and excellent readability for long coding sessions.
 
-## ✨ Features
+## Features
 
-- 🌳 **Enhanced TreeSitter:** Full semantic highlighting with JSX/TSX support
-- 🔍 **LSP Semantic Tokens:** 26+ semantic token types and modifiers
-- 🔌 **27+ Plugin Integrations:** nvim-cmp, telescope, mini.nvim suite, bufferline, trouble, and more
-- 🖥️ **16 Terminal/Editor Themes:** Alacritty, Kitty, iTerm2, Helix, Fish, Lazygit, and more
+- **Enhanced TreeSitter:** Full semantic highlighting with JSX/TSX support
+- **LSP Semantic Tokens:** 26+ semantic token types and modifiers
+- **27+ Plugin Integrations:** nvim-cmp, telescope, mini.nvim suite, bufferline, trouble, and more
+- **16 Terminal/Editor Themes:** Alacritty, Kitty, iTerm2, Helix, Fish, Lazygit, and more
 
-## 📦 Requirements
+## Requirements
 
 - Neovim >= 0.8.0
 - `termguicolors` enabled
 
-## 📥 Installation
+## Installation
 
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -44,7 +44,7 @@ use {
 }
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ```lua
 require('nightingale').setup({
@@ -74,48 +74,12 @@ require('nightingale').setup({
 vim.cmd("colorscheme nightingale")
 ```
 
-# All extras use the same color palette for perfect consistency across your entire development environment.
-
-📖 **[View detailed installation guide →](./EXTRAS.md)**
-
-## 🎨 Color Palette
-
-### Core Colors
-
-```lua
--- Syntax
-green   = "#98BB6C"  -- Strings, success
-blue    = "#85a8da"  -- Functions, primary
-cyan    = "#7cd0bf"  -- Types, constants
-purple  = "#a584c0"  -- Keywords, control flow
-orange  = "#f5a284"  -- Constants, numbers
-red     = "#ee5d43"  -- Errors, warnings
-yellow  = "#E6C384"  -- Identifiers, parameters
-
--- UI
-fg      = "#ffffff"  -- Main foreground
-fg2     = "#DCD7BA"  -- Secondary foreground
-bg      = "#202020"  -- Main background
-gray    = "#727169"  -- Comments, disabled text
-```
-
-### Semantic Mappings
-
-- **Strings/Success:** Green (`#98BB6C`)
-- **Functions:** Blue (`#85a8da`)
-- **Types:** Cyan (`#7cd0bf`)
-- **Keywords:** Purple (`#a584c0`)
-- **Constants:** Orange (`#f5a284`)
-- **Errors:** Red (`#ee5d43`)
-- **Parameters:** Yellow (`#E6C384`)
-- **Comments:** Gray (`#727169`)
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Original [Nightingale VS Code Theme](https://marketplace.visualstudio.com/items?itemName=bfrangi.vscode-nightingale-theme) by bfrangi
 - Theme structure inspired by [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 - Plugin integration patterns from [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 
-## 📄 License
+## License
 
 MIT
