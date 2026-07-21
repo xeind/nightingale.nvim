@@ -1,0 +1,73 @@
+# Theme: Nightingale
+# https://github.com/xeind/nightingale.nvim
+
+theme[main_bg]="#181616"
+theme[main_fg]="#DCD7BA"
+
+# Title color for boxes
+theme[title]="#ffffff"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#f5a284"
+
+# Selected item in processes box
+theme[selected_bg]="#363636"
+theme[selected_fg]="#7cd0bf"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#7cd0bf"
+
+# Cpu box outline color
+theme[cpu_box]="#585858"
+
+# Memory/disks box outline color
+theme[mem_box]="#585858"
+
+# Net up/down box outline color
+theme[net_box]="#585858"
+
+# Processes box outline color
+theme[proc_box]="#585858"
+
+# Box divider line and small boxes line color
+theme[div_line]="#585858"
+
+# Temperature graph colors
+theme[temp_start]="#98BB6C"
+theme[temp_mid]="#E6C384"
+theme[temp_end]="#ff5353"
+
+# CPU graph colors
+theme[cpu_start]="#98BB6C"
+theme[cpu_mid]="#E6C384"
+theme[cpu_end]="#ff5353"
+
+# Mem/Disk free meter
+theme[free_start]="#98BB6C"
+theme[free_mid]="#E6C384"
+theme[free_end]="#ff5353"
+
+# Mem/Disk cached meter
+theme[cached_start]="#98BB6C"
+theme[cached_mid]="#E6C384"
+theme[cached_end]="#ff5353"
+
+# Mem/Disk available meter
+theme[available_start]="#98BB6C"
+theme[available_mid]="#E6C384"
+theme[available_end]="#ff5353"
+
+# Mem/Disk used meter
+theme[used_start]="#98BB6C"
+theme[used_mid]="#E6C384"
+theme[used_end]="#ff5353"
+
+# Download graph colors
+theme[download_start]="#98BB6C"
+theme[download_mid]="#E6C384"
+theme[download_end]="#ff5353"
+
+# Upload graph colors
+theme[upload_start]="#98BB6C"
+theme[upload_mid]="#E6C384"
+theme[upload_end]="#ff5353"

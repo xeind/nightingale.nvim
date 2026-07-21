@@ -1,0 +1,19 @@
+// Nightingale Zellij theme
+// Add this file to your `CONFIG_DIR/themes` directory as described here:
+// https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
+
+themes {
+    nightingale {
+        fg "#DCD7BA"
+        bg "#363636"
+        black "#181616"
+        red "#e14c4c"
+        green "#89c471"
+        yellow "#ffd13b"
+        blue "#5690ac"
+        magenta "#957FB8"
+        cyan "#9CABCA"
+        white "#ffffff"
+        orange "#f5a284"
+    }
+}
