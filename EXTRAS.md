@@ -1,6 +1,6 @@
 # Nightingale Extras
 
-Nightingale provides **23 color schemes** for popular terminals, editors, and development tools. All themes use the same carefully crafted color palette for perfect consistency across your entire development environment.
+Nightingale provides **24 color schemes** for popular terminals, editors, and development tools. All themes use the same carefully crafted color palette for perfect consistency across your entire development environment.
 
 Terminal/CLI extras (from `claude-code/` onward) are generated from `lua/nightingale/colors.lua` — the single source of truth — via `scripts/generate-extras`. See [Regenerating extras](#regenerating-extras) below.
 
@@ -28,6 +28,7 @@ Terminal/CLI extras (from `claude-code/` onward) are generated from `lua/nightin
   - [Zellij](#zellij)
   - [Yazi](#yazi)
   - [GitUI](#gitui)
+  - [Herdr](#herdr)
   - [Delta](#delta)
   - [Btop++](#btop)
 
@@ -387,6 +388,29 @@ Terminal UI for Git.
 mkdir -p ~/.config/gitui
 cp extras/gitui/nightingale.ron ~/.config/gitui/theme.ron
 ```
+
+### Herdr
+
+Terminal multiplexer for coding agents.
+
+Herdr loads no theme files. You pick a built-in theme, then override its color
+tokens, so Nightingale ships as a config snippet on top of the `kanagawa` base.
+
+**Installation:**
+
+```bash
+cat extras/herdr/nightingale.toml >> ~/.config/herdr/config.toml
+
+# Reload a running server:
+herdr server reload-config
+```
+
+If your config already has a `[theme]` section, replace it instead of appending
+— TOML rejects a duplicate table.
+
+On Windows the config lives at `%APPDATA%\herdr\config.toml`.
+
+For a transparent panel background, set `panel_bg = "reset"`.
 
 ### Delta
 

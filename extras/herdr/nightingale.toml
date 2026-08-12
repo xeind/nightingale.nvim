@@ -1,0 +1,25 @@
+# Nightingale for Herdr
+# Herdr has no custom theme files: pick the closest built-in, then override
+# every token. Append this to ~/.config/herdr/config.toml.
+
+[theme]
+name = "kanagawa"
+
+[theme.custom]
+accent = "#d6bf9a"
+panel_bg = "#181616"
+# sidebar_bg = "#202020"  # uncomment for an opaque desktop sidebar
+surface0 = "#2a2a2a"
+surface1 = "#363636"
+surface_dim = "#1c1c1c"
+overlay0 = "#727169"
+overlay1 = "#909398"
+text = "#DCD7BA"
+subtext0 = "#C8C093"
+mauve = "#a584c0"
+green = "#98BB6C"
+yellow = "#E6C384"
+red = "#FF5D62"
+blue = "#85a8da"
+teal = "#7cd0bf"
+peach = "#FFA066"

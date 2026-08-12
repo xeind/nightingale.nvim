@@ -15,6 +15,7 @@ M.extras = {
   delta       = { ext = "gitconfig",label = "Delta",        url = "https://github.com/dandavison/delta" },
   yazi        = { ext = "toml",     label = "Yazi",         url = "https://github.com/sxyazi/yazi" },
   gitui       = { ext = "ron",      label = "GitUI",        url = "https://github.com/extrawurst/gitui" },
+  herdr       = { ext = "toml",     label = "Herdr",        url = "https://herdr.dev" },
 }
 
 --- Build the flat color table used by every extra template.
