@@ -1,0 +1,40 @@
+{
+  "name": "Nightingale",
+  "type": "custom",
+  "text": {
+    "primary": "#DCD7BA",
+    "secondary": "#C8C093",
+    "response": "#DCD7BA"
+  },
+  "background": {
+    "primary": "#181616",
+    "diff": {
+      "added": "#2B3328",
+      "removed": "#43242B"
+    }
+  },
+  "border": {
+    "default": "#363636",
+    "focused": "#85a8da"
+  },
+  "ui": {
+    "comment": "#727169",
+    "symbol": "#C8C093",
+    "gradient": ["#85a8da", "#a584c0", "#7cd0bf"]
+  },
+  "Background": "#181616",
+  "Foreground": "#DCD7BA",
+  "LightBlue": "#81c0da",
+  "AccentBlue": "#85a8da",
+  "AccentPurple": "#a584c0",
+  "AccentCyan": "#7cd0bf",
+  "AccentGreen": "#98BB6C",
+  "AccentYellow": "#E6C384",
+  "AccentRed": "#FF5D62",
+  "DiffAdded": "#2B3328",
+  "DiffRemoved": "#43242B",
+  "Comment": "#727169",
+  "Gray": "#C8C093",
+  "DarkGray": "#181818",
+  "GradientColors": ["#85a8da", "#a584c0", "#7cd0bf"]
+}
