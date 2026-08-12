@@ -16,6 +16,8 @@ M.extras = {
   yazi        = { ext = "toml",     label = "Yazi",         url = "https://github.com/sxyazi/yazi" },
   gitui       = { ext = "ron",      label = "GitUI",        url = "https://github.com/extrawurst/gitui" },
   herdr       = { ext = "toml",     label = "Herdr",        url = "https://herdr.dev" },
+  gemini_cli  = { ext = "json",     dir = "gemini-cli", label = "Gemini CLI", url = "https://github.com/google-gemini/gemini-cli" },
+  pi          = { ext = "json",     label = "Pi",           url = "https://github.com/badlogic/pi-mono" },
 }
 
 --- Build the flat color table used by every extra template.

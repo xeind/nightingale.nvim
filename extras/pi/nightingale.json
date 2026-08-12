@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "Nightingale",
+  "colors": {
+    "accent": "#85a8da",
+    "border": "#585858",
+    "borderAccent": "#7cd0bf",
+    "borderMuted": "#1b1b1b",
+    "success": "#98BB6C",
+    "error": "#E82424",
+    "warning": "#FF9E3B",
+    "muted": "#C8C093",
+    "dim": "#909398",
+    "text": "",
+    "thinkingText": "#727169",
+
+    "selectedBg": "#444444",
+    "userMessageBg": "#181818",
+    "userMessageText": "",
+    "customMessageBg": "#181818",
+    "customMessageText": "",
+    "customMessageLabel": "#a584c0",
+    "toolPendingBg": "#2a2a2a",
+    "toolSuccessBg": "#2a2a2a",
+    "toolErrorBg": "#43242B",
+    "toolTitle": "",
+    "toolOutput": "#C8C093",
+
+    "mdHeading": "#85a8da",
+    "mdLink": "#7cd0bf",
+    "mdLinkUrl": "#727169",
+    "mdCode": "#85a8da",
+    "mdCodeBlock": "#181818",
+    "mdCodeBlockBorder": "#727169",
+    "mdQuote": "#727169",
+    "mdQuoteBorder": "#727169",
+    "mdHr": "#f5a284",
+    "mdListBullet": "#f5a284",
+
+    "toolDiffAdded": "#2B3328",
+    "toolDiffRemoved": "#43242B",
+    "toolDiffContext": "#252535",
+
+    "syntaxComment": "#727169",
+    "syntaxKeyword": "#a584c0",
+    "syntaxFunction": "#85a8da",
+    "syntaxVariable": "#DCD7BA",
+    "syntaxString": "#98BB6C",
+    "syntaxNumber": "#f5a284",
+    "syntaxType": "#7cd0bf",
+    "syntaxOperator": "#E6C384",
+    "syntaxPunctuation": "#C8C093",
+
+    "thinkingOff": "#585858",
+    "thinkingMinimal": "#909398",
+    "thinkingLow": "#658594",
+    "thinkingMedium": "#85a8da",
+    "thinkingHigh": "#D27E99",
+    "thinkingXhigh": "#a584c0",
+
+    "bashMode": "#f5a284"
+  }
+}

@@ -1,6 +1,6 @@
 # Nightingale Extras
 
-Nightingale provides **24 color schemes** for popular terminals, editors, and development tools. All themes use the same carefully crafted color palette for perfect consistency across your entire development environment.
+Nightingale provides **26 color schemes** for popular terminals, editors, and development tools. All themes use the same carefully crafted color palette for perfect consistency across your entire development environment.
 
 Terminal/CLI extras (from `claude-code/` onward) are generated from `lua/nightingale/colors.lua` — the single source of truth — via `scripts/generate-extras`. See [Regenerating extras](#regenerating-extras) below.
 
@@ -25,6 +25,8 @@ Terminal/CLI extras (from `claude-code/` onward) are generated from `lua/nightin
 - [AI Coding CLIs & TUI Tools](#ai-coding-clis--tui-tools)
   - [Claude Code](#claude-code)
   - [Codex CLI](#codex-cli)
+  - [Gemini CLI](#gemini-cli)
+  - [Pi](#pi)
   - [Zellij](#zellij)
   - [Yazi](#yazi)
   - [GitUI](#gitui)
@@ -352,6 +354,42 @@ cp extras/codex/nightingale.tmTheme "${CODEX_HOME:-$HOME/.codex}/themes/"
 ```
 
 Run `/theme` inside a Codex session to preview and select **nightingale**. Codex custom themes are standard TextMate `.tmTheme` files.
+
+### Gemini CLI
+
+Google's terminal coding agent.
+
+**Installation:**
+
+```bash
+mkdir -p ~/.gemini
+cp extras/gemini-cli/nightingale.json ~/.gemini/nightingale.json
+```
+
+Point `theme` at the file in `~/.gemini/settings.json`:
+
+```json
+{
+  "ui": {
+    "theme": "~/.gemini/nightingale.json"
+  }
+}
+```
+
+You can also paste the file's contents into the `ui.customThemes` block instead.
+
+### Pi
+
+Minimal terminal coding harness.
+
+**Installation:**
+
+```bash
+mkdir -p ~/.pi/agent/themes
+cp extras/pi/nightingale.json ~/.pi/agent/themes/
+```
+
+Select it with `/settings`. Pi hot-reloads themes, so edits apply straight away.
 
 ### Zellij
 
